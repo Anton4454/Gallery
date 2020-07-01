@@ -1,0 +1,4 @@
+#Wed Jul 01 22:20:26 MSK 2020
+base.0=C\:\\Users\\azyuz\\OneDrive\\Desktop\\MyApplication\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
+path.0=classes.dex
+renamed.0=classes.dex
