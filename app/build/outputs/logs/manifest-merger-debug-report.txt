@@ -1,11 +1,12 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:2:1-28:12
-INJECTED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:2:1-28:12
-INJECTED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:2:1-28:12
-INJECTED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:2:1-28:12
+ADDED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:2:1-32:12
+INJECTED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:2:1-32:12
+INJECTED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:2:1-32:12
+INJECTED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:2:1-32:12
 MERGED from [com.miguelcatalan:materialsearchview:1.4.0] C:\Users\azyuz\.gradle\caches\transforms-2\files-2.1\18a6f13d728959421b819abb6421cef8\jetified-materialsearchview-1.4.0\AndroidManifest.xml:2:1-13:12
 MERGED from [com.google.android.material:material:1.0.0] C:\Users\azyuz\.gradle\caches\transforms-2\files-2.1\bcaf2f38bd0e6ffe04a17e5f685cbed4\material-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [com.airbnb.android:lottie:3.4.1] C:\Users\azyuz\.gradle\caches\transforms-2\files-2.1\6b8c303f0affc6b2601a70b803b53c9a\jetified-lottie-3.4.1\AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.appcompat:appcompat:1.1.0] C:\Users\azyuz\.gradle\caches\transforms-2\files-2.1\c2c5fa787d66aaf40578b3071f4d283f\appcompat-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\azyuz\.gradle\caches\transforms-2\files-2.1\28120aa98d624ce8fee0a8087788fd91\constraintlayout-1.1.3\AndroidManifest.xml:2:1-11:12
 MERGED from [com.mindorks:placeholderview:0.2.7] C:\Users\azyuz\.gradle\caches\transforms-2\files-2.1\3ca177ff3f279ebe09a2e6dcc5241dcc\jetified-placeholderview-0.2.7\AndroidManifest.xml:2:1-12:12
@@ -40,20 +41,20 @@ MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\azyuz\.gradle\caches
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\azyuz\.gradle\caches\transforms-2\files-2.1\ed8cc0ac00b11c0234ef1e5a578c70c1\lifecycle-livedata-2.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\azyuz\.gradle\caches\transforms-2\files-2.1\df4d09f70e3f533a2fede8f96085147c\lifecycle-livedata-core-2.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\azyuz\.gradle\caches\transforms-2\files-2.1\c16c855844b564ee7204d4d6005470fb\core-runtime-2.0.0\AndroidManifest.xml:17:1-22:12
-INJECTED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:2:1-28:12
-INJECTED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:2:1-28:12
-INJECTED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:2:1-28:12
+INJECTED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:2:1-32:12
+INJECTED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:2:1-32:12
+INJECTED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:2:1-32:12
 	package
 		ADDED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:3:5-40
 		INJECTED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml
 		INJECTED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml
-		ADDED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:2:1-28:12
+		ADDED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:2:1-32:12
 		INJECTED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml
-		ADDED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:2:1-28:12
+		ADDED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:2:1-32:12
 		INJECTED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:2:11-69
@@ -62,15 +63,17 @@ ADDED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:5:5-80
 	android:name
 		ADDED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:5:22-77
 uses-permission#android.permission.VIBRATE
-ADDED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:7:5-66
+ADDED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:6:5-66
 	android:name
-		ADDED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:7:22-63
+		ADDED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:6:22-63
 application
-ADDED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:9:5-26:19
+ADDED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:8:5-30:19
 MERGED from [com.miguelcatalan:materialsearchview:1.4.0] C:\Users\azyuz\.gradle\caches\transforms-2\files-2.1\18a6f13d728959421b819abb6421cef8\jetified-materialsearchview-1.4.0\AndroidManifest.xml:11:5-20
 MERGED from [com.miguelcatalan:materialsearchview:1.4.0] C:\Users\azyuz\.gradle\caches\transforms-2\files-2.1\18a6f13d728959421b819abb6421cef8\jetified-materialsearchview-1.4.0\AndroidManifest.xml:11:5-20
 MERGED from [com.google.android.material:material:1.0.0] C:\Users\azyuz\.gradle\caches\transforms-2\files-2.1\bcaf2f38bd0e6ffe04a17e5f685cbed4\material-1.0.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.0.0] C:\Users\azyuz\.gradle\caches\transforms-2\files-2.1\bcaf2f38bd0e6ffe04a17e5f685cbed4\material-1.0.0\AndroidManifest.xml:22:5-20
+MERGED from [com.airbnb.android:lottie:3.4.1] C:\Users\azyuz\.gradle\caches\transforms-2\files-2.1\6b8c303f0affc6b2601a70b803b53c9a\jetified-lottie-3.4.1\AndroidManifest.xml:9:5-20
+MERGED from [com.airbnb.android:lottie:3.4.1] C:\Users\azyuz\.gradle\caches\transforms-2\files-2.1\6b8c303f0affc6b2601a70b803b53c9a\jetified-lottie-3.4.1\AndroidManifest.xml:9:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\azyuz\.gradle\caches\transforms-2\files-2.1\28120aa98d624ce8fee0a8087788fd91\constraintlayout-1.1.3\AndroidManifest.xml:9:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\azyuz\.gradle\caches\transforms-2\files-2.1\28120aa98d624ce8fee0a8087788fd91\constraintlayout-1.1.3\AndroidManifest.xml:9:5-20
 MERGED from [androidx.core:core:1.1.0] C:\Users\azyuz\.gradle\caches\transforms-2\files-2.1\03736cf4bc3669a69d502627b70a527e\core-1.1.0\AndroidManifest.xml:24:5-89
@@ -80,41 +83,47 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\az
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.1.0] C:\Users\azyuz\.gradle\caches\transforms-2\files-2.1\03736cf4bc3669a69d502627b70a527e\core-1.1.0\AndroidManifest.xml:24:18-86
 	android:supportsRtl
-		ADDED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:15:9-35
+		ADDED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:14:9-35
 	android:label
-		ADDED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:13:9-41
+		ADDED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:12:9-41
 	android:hardwareAccelerated
-		ADDED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:11:9-44
+		ADDED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:10:9-44
 	android:roundIcon
-		ADDED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:14:9-54
+		ADDED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:13:9-54
 	android:icon
-		ADDED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:12:9-43
+		ADDED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:11:9-43
 	android:allowBackup
-		ADDED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:10:9-35
+		ADDED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:9:9-35
 	android:theme
-		ADDED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:16:9-40
-activity#com.example.myapplication.ImageFullSize
-ADDED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:17:9-60
+		ADDED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:15:9-40
+activity#com.example.myapplication.SplashActivity
+ADDED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:16:9-23:20
 	android:name
-		ADDED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:17:19-48
-activity#com.example.myapplication.MainActivity
-ADDED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:18:9-25:20
-	android:name
-		ADDED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:18:19-47
+		ADDED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:16:19-49
 intent-filter#action:name:android.intent.action.MAIN+action:name:android.intent.action.SEARCH+category:name:android.intent.category.LAUNCHER
-ADDED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:19:13-24:29
+ADDED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:17:13-22:25
 action#android.intent.action.MAIN
-ADDED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:20:17-69
+ADDED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:18:13-65
 	android:name
-		ADDED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:20:25-66
+		ADDED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:18:21-62
 action#android.intent.action.SEARCH
-ADDED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:21:17-71
+ADDED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:19:13-67
 	android:name
-		ADDED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:21:25-68
+		ADDED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:19:21-64
 category#android.intent.category.LAUNCHER
-ADDED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:23:17-77
+ADDED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:21:13-73
 	android:name
-		ADDED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:23:27-74
+		ADDED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:21:23-70
+activity#com.example.myapplication.ImageFullSize
+ADDED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:24:9-51
+	android:name
+		ADDED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:24:19-48
+activity#com.example.myapplication.MainActivity
+ADDED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:25:9-29:20
+	android:name
+		ADDED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:25:19-47
+intent-filter#action:name:android.intent.action.SEARCH
+ADDED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:26:13-28:29
 uses-sdk
 INJECTED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml
@@ -123,6 +132,8 @@ MERGED from [com.miguelcatalan:materialsearchview:1.4.0] C:\Users\azyuz\.gradle\
 MERGED from [com.miguelcatalan:materialsearchview:1.4.0] C:\Users\azyuz\.gradle\caches\transforms-2\files-2.1\18a6f13d728959421b819abb6421cef8\jetified-materialsearchview-1.4.0\AndroidManifest.xml:7:5-9:41
 MERGED from [com.google.android.material:material:1.0.0] C:\Users\azyuz\.gradle\caches\transforms-2\files-2.1\bcaf2f38bd0e6ffe04a17e5f685cbed4\material-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.material:material:1.0.0] C:\Users\azyuz\.gradle\caches\transforms-2\files-2.1\bcaf2f38bd0e6ffe04a17e5f685cbed4\material-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.airbnb.android:lottie:3.4.1] C:\Users\azyuz\.gradle\caches\transforms-2\files-2.1\6b8c303f0affc6b2601a70b803b53c9a\jetified-lottie-3.4.1\AndroidManifest.xml:5:5-7:41
+MERGED from [com.airbnb.android:lottie:3.4.1] C:\Users\azyuz\.gradle\caches\transforms-2\files-2.1\6b8c303f0affc6b2601a70b803b53c9a\jetified-lottie-3.4.1\AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.appcompat:appcompat:1.1.0] C:\Users\azyuz\.gradle\caches\transforms-2\files-2.1\c2c5fa787d66aaf40578b3071f4d283f\appcompat-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.appcompat:appcompat:1.1.0] C:\Users\azyuz\.gradle\caches\transforms-2\files-2.1\c2c5fa787d66aaf40578b3071f4d283f\appcompat-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\azyuz\.gradle\caches\transforms-2\files-2.1\28120aa98d624ce8fee0a8087788fd91\constraintlayout-1.1.3\AndroidManifest.xml:5:5-7:41

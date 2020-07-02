@@ -14,50 +14,60 @@
 11-->C:\dev\MyApplication\app\src\main\AndroidManifest.xml:5:5-80
 11-->C:\dev\MyApplication\app\src\main\AndroidManifest.xml:5:22-77
 12    <uses-permission android:name="android.permission.VIBRATE" />
-12-->C:\dev\MyApplication\app\src\main\AndroidManifest.xml:7:5-66
-12-->C:\dev\MyApplication\app\src\main\AndroidManifest.xml:7:22-63
+12-->C:\dev\MyApplication\app\src\main\AndroidManifest.xml:6:5-66
+12-->C:\dev\MyApplication\app\src\main\AndroidManifest.xml:6:22-63
 13
 14    <application
-14-->C:\dev\MyApplication\app\src\main\AndroidManifest.xml:9:5-26:19
+14-->C:\dev\MyApplication\app\src\main\AndroidManifest.xml:8:5-30:19
 15        android:allowBackup="true"
-15-->C:\dev\MyApplication\app\src\main\AndroidManifest.xml:10:9-35
+15-->C:\dev\MyApplication\app\src\main\AndroidManifest.xml:9:9-35
 16        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 16-->[androidx.core:core:1.1.0] C:\Users\azyuz\.gradle\caches\transforms-2\files-2.1\03736cf4bc3669a69d502627b70a527e\core-1.1.0\AndroidManifest.xml:24:18-86
 17        android:debuggable="true"
 18        android:extractNativeLibs="false"
 19        android:hardwareAccelerated="false"
-19-->C:\dev\MyApplication\app\src\main\AndroidManifest.xml:11:9-44
+19-->C:\dev\MyApplication\app\src\main\AndroidManifest.xml:10:9-44
 20        android:icon="@mipmap/ic_launcher"
-20-->C:\dev\MyApplication\app\src\main\AndroidManifest.xml:12:9-43
+20-->C:\dev\MyApplication\app\src\main\AndroidManifest.xml:11:9-43
 21        android:label="@string/app_name"
-21-->C:\dev\MyApplication\app\src\main\AndroidManifest.xml:13:9-41
+21-->C:\dev\MyApplication\app\src\main\AndroidManifest.xml:12:9-41
 22        android:roundIcon="@mipmap/ic_launcher_round"
-22-->C:\dev\MyApplication\app\src\main\AndroidManifest.xml:14:9-54
+22-->C:\dev\MyApplication\app\src\main\AndroidManifest.xml:13:9-54
 23        android:supportsRtl="true"
-23-->C:\dev\MyApplication\app\src\main\AndroidManifest.xml:15:9-35
+23-->C:\dev\MyApplication\app\src\main\AndroidManifest.xml:14:9-35
 24        android:testOnly="true"
 25        android:theme="@style/AppTheme" >
-25-->C:\dev\MyApplication\app\src\main\AndroidManifest.xml:16:9-40
-26        <activity android:name="com.example.myapplication.ImageFullSize" />
-26-->C:\dev\MyApplication\app\src\main\AndroidManifest.xml:17:9-60
-26-->C:\dev\MyApplication\app\src\main\AndroidManifest.xml:17:19-48
-27        <activity android:name="com.example.myapplication.MainActivity" >
-27-->C:\dev\MyApplication\app\src\main\AndroidManifest.xml:18:9-25:20
-27-->C:\dev\MyApplication\app\src\main\AndroidManifest.xml:18:19-47
-28            <intent-filter>
-28-->C:\dev\MyApplication\app\src\main\AndroidManifest.xml:19:13-24:29
-29                <action android:name="android.intent.action.MAIN" />
-29-->C:\dev\MyApplication\app\src\main\AndroidManifest.xml:20:17-69
-29-->C:\dev\MyApplication\app\src\main\AndroidManifest.xml:20:25-66
-30                <action android:name="android.intent.action.SEARCH" />
-30-->C:\dev\MyApplication\app\src\main\AndroidManifest.xml:21:17-71
-30-->C:\dev\MyApplication\app\src\main\AndroidManifest.xml:21:25-68
-31
-32                <category android:name="android.intent.category.LAUNCHER" />
-32-->C:\dev\MyApplication\app\src\main\AndroidManifest.xml:23:17-77
-32-->C:\dev\MyApplication\app\src\main\AndroidManifest.xml:23:27-74
-33            </intent-filter>
-34        </activity>
-35    </application>
-36
-37</manifest>
+25-->C:\dev\MyApplication\app\src\main\AndroidManifest.xml:15:9-40
+26        <activity android:name="com.example.myapplication.SplashActivity" >
+26-->C:\dev\MyApplication\app\src\main\AndroidManifest.xml:16:9-23:20
+26-->C:\dev\MyApplication\app\src\main\AndroidManifest.xml:16:19-49
+27            <intent-filter>
+27-->C:\dev\MyApplication\app\src\main\AndroidManifest.xml:17:13-22:25
+28                <action android:name="android.intent.action.MAIN" />
+28-->C:\dev\MyApplication\app\src\main\AndroidManifest.xml:18:13-65
+28-->C:\dev\MyApplication\app\src\main\AndroidManifest.xml:18:21-62
+29                <action android:name="android.intent.action.SEARCH" />
+29-->C:\dev\MyApplication\app\src\main\AndroidManifest.xml:19:13-67
+29-->C:\dev\MyApplication\app\src\main\AndroidManifest.xml:19:21-64
+30
+31                <category android:name="android.intent.category.LAUNCHER" />
+31-->C:\dev\MyApplication\app\src\main\AndroidManifest.xml:21:13-73
+31-->C:\dev\MyApplication\app\src\main\AndroidManifest.xml:21:23-70
+32            </intent-filter>
+33        </activity>
+34        <activity android:name="com.example.myapplication.ImageFullSize" />
+34-->C:\dev\MyApplication\app\src\main\AndroidManifest.xml:24:9-51
+34-->C:\dev\MyApplication\app\src\main\AndroidManifest.xml:24:19-48
+35        <activity android:name="com.example.myapplication.MainActivity" >
+35-->C:\dev\MyApplication\app\src\main\AndroidManifest.xml:25:9-29:20
+35-->C:\dev\MyApplication\app\src\main\AndroidManifest.xml:25:19-47
+36            <intent-filter>
+36-->C:\dev\MyApplication\app\src\main\AndroidManifest.xml:26:13-28:29
+37                <action android:name="android.intent.action.SEARCH" />
+37-->C:\dev\MyApplication\app\src\main\AndroidManifest.xml:19:13-67
+37-->C:\dev\MyApplication\app\src\main\AndroidManifest.xml:19:21-64
+38            </intent-filter>
+39        </activity>
+40    </application>
+41
+42</manifest>
