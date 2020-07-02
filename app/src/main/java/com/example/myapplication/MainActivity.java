@@ -2,11 +2,15 @@ package com.example.myapplication;
 
 import android.Manifest;
 import android.content.ClipData;
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
+import android.os.VibrationEffect;
+import android.os.Vibrator;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -32,9 +36,11 @@ public class MainActivity extends AppCompatActivity {
     VideoView videoView;
 
     private List<Drawable> images = new ArrayList<>();
+    private List<Uri> imagesUri = new ArrayList<>();
 
     private RecyclerAdapter adapter;
 
+    private Drawable drawable_count;
 
     private RecyclerView.LayoutManager layoutManager;
 
@@ -47,13 +53,30 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setHasFixedSize(false);
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.addOnItemTouchListener(
-                new RecyclerItemClickListener(this, recyclerView ,new RecyclerItemClickListener.OnItemClickListener() {
-                    @Override public void onItemClick(View view, int position) {
-                        Toast.makeText(getBaseContext(), "!!!!", Toast.LENGTH_LONG).show();
+                new RecyclerItemClickListener(this, recyclerView, new RecyclerItemClickListener.OnItemClickListener() {
+                    @Override
+                    public void onItemClick(View view, int position) {
+                        Uri uri = imagesUri.get(position);
+                        Intent intent = new Intent(getBaseContext(), ImageFullSize.class);
+                        intent.putExtra("uri", uri.toString());
+                        startActivity(intent);
                     }
 
-                    @Override public void onLongItemClick(View view, int position) {
-                        Toast.makeText(getBaseContext(), "1111", Toast.LENGTH_LONG).show();
+                    @Override
+                    public void onLongItemClick(View view, int position) {
+                        Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                            v.vibrate(VibrationEffect.createOneShot(100, VibrationEffect.DEFAULT_AMPLITUDE));
+                        } else {
+                            v.vibrate(100);
+                        }
+                        ArrayList<Uri> imageUris = new ArrayList<Uri>();
+                        imageUris.add(imagesUri.get(position));
+                        Intent shareIntent = new Intent();
+                        shareIntent.setAction(Intent.ACTION_SEND_MULTIPLE);
+                        shareIntent.putParcelableArrayListExtra(Intent.EXTRA_STREAM, imageUris);
+                        shareIntent.setType("image/*");
+                        startActivity(Intent.createChooser(shareIntent, "Share images to.."));
                     }
                 })
         );
@@ -84,21 +107,15 @@ public class MainActivity extends AppCompatActivity {
                                            String[] permissions, int[] grantResults) {
         switch (requestCode) {
             case REQUEST_EXTERNAL_STORAGE: {
-                // If request is cancelled, the result arrays are empty.
                 if (grantResults.length > 0
                         && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                    // permission was granted, yay! Do the
-                    // contacts-related task you need to do.
                     launchGalleryIntent();
                 } else {
-                    //  permission denied4
-                    // functionality that depends on this permission.
+
                 }
                 return;
             }
 
-            // other 'case' lines to check for other
-            // permissions this app might request.
         }
     }
 
@@ -107,14 +124,13 @@ public class MainActivity extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == REQUEST_EXTERNAL_STORAGE && resultCode == RESULT_OK) {
-            //final PlaceHolderView mGalleryView = findViewById(R.id.galleryView);
             final List<Drawable> drawables = new ArrayList<>();
             ClipData clipData = data.getClipData();
 
             if (clipData != null) {
-                //multiple images selected
                 for (int i = 0; i < clipData.getItemCount(); i++) {
                     Uri imageUri = clipData.getItemAt(i).getUri();
+                    imagesUri.add(imageUri);
                     Log.d("URI", imageUri.toString());
                     try {
                         InputStream inputStream = getContentResolver().openInputStream(imageUri);
@@ -125,8 +141,8 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }
             } else {
-                //single image selected
                 Uri imageUri = data.getData();
+                imagesUri.add(imageUri);
                 Log.d("URI", imageUri.toString());
                 try {
                     InputStream inputStream = getContentResolver().openInputStream(imageUri);
@@ -160,8 +176,6 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     }
-
-
 
 
 }

@@ -9,7 +9,6 @@
     android:layout_gravity="center|top"
     android:paddingTop="20dp">
 
-
     <ImageView
         android:id="@+id/album"
         android:layout_width="400dp"

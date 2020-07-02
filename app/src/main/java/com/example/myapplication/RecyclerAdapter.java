@@ -20,7 +20,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ImageV
     private List<Drawable> drawables;
 
     private Context context;
-    RecyclerView recyclerView ;
+    RecyclerView recyclerView;
 
     private int lastPosition = -1;
 
@@ -43,18 +43,17 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ImageV
         Drawable image_id = drawables.get(position);
         holder.Album.setImageDrawable(image_id);
         setAnimation(holder.itemView, position);
+
     }
 
-    private void setAnimation(View viewToAnimate, int position)
-    {
+
+    private void setAnimation(View viewToAnimate, int position) {
         // If the bound view wasn't previously displayed on screen, it's animated
-        if (position > lastPosition)
-        {
+        if (position > lastPosition) {
             Animation animation = AnimationUtils.loadAnimation(context, android.R.anim.slide_in_left);
             viewToAnimate.startAnimation(animation);
             lastPosition = position;
-        }
-        else {
+        } else {
             Animation animation = AnimationUtils.loadAnimation(context, android.R.anim.slide_in_left);
             viewToAnimate.startAnimation(animation);
             position = lastPosition;
@@ -62,9 +61,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ImageV
     }
 
 
-
-    public void clearAnimation()
-    {
+    public void clearAnimation() {
         recyclerView.clearAnimation();
     }
 
@@ -74,7 +71,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ImageV
     }
 
 
-    public static class ImageViewHolder extends RecyclerView.ViewHolder{
+    public static class ImageViewHolder extends RecyclerView.ViewHolder {
 
         ImageView Album;
 
@@ -82,5 +79,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ImageV
             super(itemView);
             Album = itemView.findViewById(R.id.album);
         }
+
+
     }
 }
