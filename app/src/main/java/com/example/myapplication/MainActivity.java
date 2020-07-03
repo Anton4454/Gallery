@@ -44,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
     private List<Uri> imagesUri = new ArrayList<>();
 
     private RecyclerAdapter adapter;
+    private int fireworkCount = 0;
 
     private Drawable drawable_count;
 
@@ -91,7 +92,10 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 final LottieAnimationView lottieAnimationView = (LottieAnimationView) findViewById(R.id.grazView);
-                lottieAnimationView.playAnimation();
+                if(fireworkCount == 0) {
+                    lottieAnimationView.playAnimation();
+                    fireworkCount++;
+                }
                 final MediaPlayer mp = MediaPlayer.create(getBaseContext(), R.raw.fireworksound);
                 mp.start();
                 new Timer().schedule(new TimerTask() {
@@ -105,7 +109,6 @@ public class MainActivity extends AppCompatActivity {
                         }
                     }
                 }, 1500);
-
             }
         });
     }
