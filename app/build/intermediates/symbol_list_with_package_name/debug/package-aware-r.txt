@@ -1052,6 +1052,7 @@ drawable abc_textfield_search_material
 drawable abc_vector_test
 drawable avd_hide_password
 drawable avd_show_password
+drawable background
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
 drawable btn_checkbox_unchecked_mtrl
@@ -1214,6 +1215,7 @@ id fixed
 id forever
 id ghost_view
 id gone
+id grazView
 id group_divider
 id groups
 id hardware
@@ -1448,6 +1450,8 @@ layout suggest_item
 layout support_simple_spinner_dropdown_item
 mipmap ic_launcher
 mipmap ic_launcher_round
+raw fireworks
+raw fireworksound
 raw loading
 string abc_action_bar_home_description
 string abc_action_bar_up_description

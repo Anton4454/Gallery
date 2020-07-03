@@ -17,10 +17,18 @@
         android:text="@string/load_image"
         android:layout_gravity="center|top"/>
 
-    <androidx.recyclerview.widget.RecyclerView
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/grazView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        app:lottie_rawRes="@raw/fireworks"
+        app:lottie_loop="true">
+    </com.airbnb.lottie.LottieAnimationView>
+
+    <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_marginTop="45dp"
         android:scrollbars="vertical"
         android:layout_gravity="center|top"/>
