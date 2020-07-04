@@ -97,19 +97,28 @@ public class MainActivity extends AppCompatActivity {
                     fireworkCount++;
                     final MediaPlayer mp = MediaPlayer.create(getBaseContext(), R.raw.fireworksound);
                     mp.start();
+                    new Timer().schedule(new TimerTask() {
+                        @Override
+                        public void run() {
+                            if (ActivityCompat.checkSelfPermission(MainActivity.this, Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
+                                ActivityCompat.requestPermissions(MainActivity.this, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, REQUEST_EXTERNAL_STORAGE);
+//                    return;
+                            } else {
+                                launchGalleryIntent();
+                            }
+                        }
+                    }, 1500);
+                }
+                else{
+                    if (ActivityCompat.checkSelfPermission(MainActivity.this, Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
+                        ActivityCompat.requestPermissions(MainActivity.this, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, REQUEST_EXTERNAL_STORAGE);
+//                    return;
+                    } else {
+                        launchGalleryIntent();
+                    }
                 }
 
-                new Timer().schedule(new TimerTask() {
-                    @Override
-                    public void run() {
-                        if (ActivityCompat.checkSelfPermission(MainActivity.this, Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
-                            ActivityCompat.requestPermissions(MainActivity.this, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, REQUEST_EXTERNAL_STORAGE);
-//                    return;
-                        } else {
-                            launchGalleryIntent();
-                        }
-                    }
-                }, 1500);
+
             }
         });
     }
