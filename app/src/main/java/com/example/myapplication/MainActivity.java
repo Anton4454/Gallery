@@ -95,9 +95,10 @@ public class MainActivity extends AppCompatActivity {
                 if(fireworkCount == 0) {
                     lottieAnimationView.playAnimation();
                     fireworkCount++;
+                    final MediaPlayer mp = MediaPlayer.create(getBaseContext(), R.raw.fireworksound);
+                    mp.start();
                 }
-                final MediaPlayer mp = MediaPlayer.create(getBaseContext(), R.raw.fireworksound);
-                mp.start();
+
                 new Timer().schedule(new TimerTask() {
                     @Override
                     public void run() {
