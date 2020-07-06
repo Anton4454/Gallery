@@ -5,8 +5,6 @@ import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
@@ -42,11 +40,11 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ImageV
     public void onBindViewHolder(@NonNull ImageViewHolder holder, int position) {
         Drawable image_id = drawables.get(position);
         holder.Album.setImageDrawable(image_id);
-        setAnimation(holder.itemView, position);
+        //setAnimation(holder.itemView, position);
 
     }
 
-
+/*
     private void setAnimation(View viewToAnimate, int position) {
         // If the bound view wasn't previously displayed on screen, it's animated
         if (position > lastPosition) {
@@ -60,10 +58,13 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ImageV
         }
     }
 
+ */
 
-    public void clearAnimation() {
+
+    /*public void clearAnimation() {
         recyclerView.clearAnimation();
     }
+     */
 
     @Override
     public int getItemCount() {

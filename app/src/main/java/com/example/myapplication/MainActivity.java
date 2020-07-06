@@ -26,8 +26,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.airbnb.lottie.LottieAnimationView;
 
-import java.io.FileNotFoundException;
-import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Timer;
@@ -46,8 +44,6 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerAdapter adapter;
     private int fireworkCount = 0;
 
-    private Drawable drawable_count;
-
     private RecyclerView.LayoutManager layoutManager;
 
     @Override
@@ -55,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
-        layoutManager = new GridLayoutManager(this, 1);
+        layoutManager = new GridLayoutManager(this, 3);
         recyclerView.setHasFixedSize(false);
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.addOnItemTouchListener(
@@ -161,6 +157,7 @@ public class MainActivity extends AppCompatActivity {
                     Uri imageUri = clipData.getItemAt(i).getUri();
                     imagesUri.add(imageUri);
                     Log.d("URI", imageUri.toString());
+                    /*
                     try {
                         InputStream inputStream = getContentResolver().openInputStream(imageUri);
                         Drawable drawable = Drawable.createFromStream(inputStream, "");
@@ -168,10 +165,12 @@ public class MainActivity extends AppCompatActivity {
                     } catch (FileNotFoundException e) {
                         e.printStackTrace();
                     }
+                     */
                 }
             } else {
                 Uri imageUri = data.getData();
                 imagesUri.add(imageUri);
+                /*
                 Log.d("URI", imageUri.toString());
                 try {
                     InputStream inputStream = getContentResolver().openInputStream(imageUri);
@@ -180,7 +179,7 @@ public class MainActivity extends AppCompatActivity {
                 } catch (FileNotFoundException e) {
                     e.printStackTrace();
                 }
-
+                 */
             }
 
             try {
