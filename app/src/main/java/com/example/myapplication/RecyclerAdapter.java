@@ -1,7 +1,7 @@
 package com.example.myapplication;
 
 import android.content.Context;
-import android.graphics.drawable.Drawable;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,23 +10,27 @@ import android.widget.ImageView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
+
 import java.util.List;
+
+
 
 public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ImageViewHolder> {
 
 
-    private List<Drawable> drawables;
+
+    private List<Uri> uris;
 
     private Context context;
+
     RecyclerView recyclerView;
 
-    private int lastPosition = -1;
 
-    public RecyclerAdapter(List<Drawable> images, Context context) {
-        this.drawables = images;
+    public RecyclerAdapter(List<Uri> images, Context context) {
+        this.uris = images;
         this.context = context;
     }
-
 
     @NonNull
     @Override
@@ -38,37 +42,20 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ImageV
 
     @Override
     public void onBindViewHolder(@NonNull ImageViewHolder holder, int position) {
-        Drawable image_id = drawables.get(position);
-        holder.Album.setImageDrawable(image_id);
-        //setAnimation(holder.itemView, position);
+        Uri image_id = uris.get(position);
+        Glide
+                .with(context)
+                .load(image_id)
+                .override(400,300)
+                .centerInside()
+                .into(holder.Album)
+        ;
 
     }
-
-/*
-    private void setAnimation(View viewToAnimate, int position) {
-        // If the bound view wasn't previously displayed on screen, it's animated
-        if (position > lastPosition) {
-            Animation animation = AnimationUtils.loadAnimation(context, android.R.anim.slide_in_left);
-            viewToAnimate.startAnimation(animation);
-            lastPosition = position;
-        } else {
-            Animation animation = AnimationUtils.loadAnimation(context, android.R.anim.slide_in_left);
-            viewToAnimate.startAnimation(animation);
-            position = lastPosition;
-        }
-    }
-
- */
-
-
-    /*public void clearAnimation() {
-        recyclerView.clearAnimation();
-    }
-     */
 
     @Override
     public int getItemCount() {
-        return drawables.size();
+        return uris.size();
     }
 
 
@@ -80,7 +67,5 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ImageV
             super(itemView);
             Album = itemView.findViewById(R.id.album);
         }
-
-
     }
 }

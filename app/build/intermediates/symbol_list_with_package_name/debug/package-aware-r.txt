@@ -609,6 +609,16 @@ attr windowFixedWidthMinor
 attr windowMinWidthMajor
 attr windowMinWidthMinor
 attr windowNoTitle
+attr zoomage_animateOnReset
+attr zoomage_autoCenter
+attr zoomage_autoResetMode
+attr zoomage_doubleTapToZoom
+attr zoomage_doubleTapToZoomScaleFactor
+attr zoomage_maxScale
+attr zoomage_minScale
+attr zoomage_restrictBounds
+attr zoomage_translatable
+attr zoomage_zoomable
 bool abc_action_bar_embed_tabs
 bool abc_allow_stacked_button_bar
 bool abc_config_actionMenuItemAllCaps
@@ -656,6 +666,7 @@ color cardview_light_background
 color cardview_shadow_end_color
 color cardview_shadow_start_color
 color colorAccent
+color colorBackground
 color colorPrimary
 color colorPrimaryDark
 color design_bottom_navigation_shadow_color
@@ -1053,6 +1064,7 @@ drawable abc_vector_test
 drawable avd_hide_password
 drawable avd_show_password
 drawable background
+drawable backgroundimg
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
 drawable btn_checkbox_unchecked_mtrl
@@ -1099,11 +1111,15 @@ drawable notify_panel_notification_icon_bg
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
 id ALT
+id ALWAYS
 id CTRL
 id FUNCTION
 id META
+id NEVER
+id OVER
 id SHIFT
 id SYM
+id UNDER
 id accessibility_action_clickable_span
 id accessibility_custom_action_0
 id accessibility_custom_action_1
@@ -1214,6 +1230,7 @@ id filled
 id fixed
 id forever
 id ghost_view
+id glide_custom_view_target_tag
 id gone
 id grazView
 id group_divider
@@ -1504,7 +1521,6 @@ style Animation_AppCompat_Dialog
 style Animation_AppCompat_DropDownUp
 style Animation_AppCompat_Tooltip
 style Animation_Design_BottomSheetDialog
-style AppTheme
 style Base_AlertDialog_AppCompat
 style Base_AlertDialog_AppCompat_Light
 style Base_Animation_AppCompat_Dialog
@@ -1697,7 +1713,9 @@ style Base_Widget_MaterialComponents_TextInputLayout
 style CardView
 style CardView_Dark
 style CardView_Light
+style FullSizeImageTheme
 style MSV_ImageButton
+style MainActivityTheme
 style Platform_AppCompat
 style Platform_AppCompat_Light
 style Platform_MaterialComponents
@@ -2078,3 +2096,4 @@ styleable Toolbar android_gravity android_minHeight buttonGravity collapseConten
 styleable View android_theme android_focusable paddingEnd paddingStart theme
 styleable ViewBackgroundHelper android_background backgroundTint backgroundTintMode
 styleable ViewStubCompat android_id android_layout android_inflatedId
+styleable ZoomageView zoomage_animateOnReset zoomage_autoCenter zoomage_autoResetMode zoomage_doubleTapToZoom zoomage_doubleTapToZoomScaleFactor zoomage_maxScale zoomage_minScale zoomage_restrictBounds zoomage_translatable zoomage_zoomable

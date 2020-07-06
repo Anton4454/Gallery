@@ -6,17 +6,13 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.drawable.Drawable;
-import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.VibrationEffect;
 import android.os.Vibrator;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
-import android.widget.VideoView;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -24,25 +20,19 @@ import androidx.core.app.ActivityCompat;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.airbnb.lottie.LottieAnimationView;
-
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Timer;
-import java.util.TimerTask;
 
 public class MainActivity extends AppCompatActivity {
+
 
     final int REQUEST_EXTERNAL_STORAGE = 100;
 
     RecyclerView recyclerView;
-    VideoView videoView;
 
-    private List<Drawable> images = new ArrayList<>();
     private List<Uri> imagesUri = new ArrayList<>();
 
     private RecyclerAdapter adapter;
-    private int fireworkCount = 0;
 
     private RecyclerView.LayoutManager layoutManager;
 
@@ -87,34 +77,12 @@ public class MainActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                final LottieAnimationView lottieAnimationView = (LottieAnimationView) findViewById(R.id.grazView);
-                if(fireworkCount == 0) {
-                    lottieAnimationView.playAnimation();
-                    fireworkCount++;
-                    final MediaPlayer mp = MediaPlayer.create(getBaseContext(), R.raw.fireworksound);
-                    mp.start();
-                    new Timer().schedule(new TimerTask() {
-                        @Override
-                        public void run() {
-                            if (ActivityCompat.checkSelfPermission(MainActivity.this, Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
-                                ActivityCompat.requestPermissions(MainActivity.this, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, REQUEST_EXTERNAL_STORAGE);
+                if (ActivityCompat.checkSelfPermission(MainActivity.this, Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
+                    ActivityCompat.requestPermissions(MainActivity.this, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, REQUEST_EXTERNAL_STORAGE);
 //                    return;
-                            } else {
-                                launchGalleryIntent();
-                            }
-                        }
-                    }, 1500);
+                } else {
+                    launchGalleryIntent();
                 }
-                else{
-                    if (ActivityCompat.checkSelfPermission(MainActivity.this, Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
-                        ActivityCompat.requestPermissions(MainActivity.this, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, REQUEST_EXTERNAL_STORAGE);
-//                    return;
-                    } else {
-                        launchGalleryIntent();
-                    }
-                }
-
-
             }
         });
     }
@@ -156,52 +124,14 @@ public class MainActivity extends AppCompatActivity {
                 for (int i = 0; i < clipData.getItemCount(); i++) {
                     Uri imageUri = clipData.getItemAt(i).getUri();
                     imagesUri.add(imageUri);
-                    Log.d("URI", imageUri.toString());
-                    /*
-                    try {
-                        InputStream inputStream = getContentResolver().openInputStream(imageUri);
-                        Drawable drawable = Drawable.createFromStream(inputStream, "");
-                        drawables.add(drawable);
-                    } catch (FileNotFoundException e) {
-                        e.printStackTrace();
-                    }
-                     */
                 }
             } else {
                 Uri imageUri = data.getData();
                 imagesUri.add(imageUri);
-                /*
-                Log.d("URI", imageUri.toString());
-                try {
-                    InputStream inputStream = getContentResolver().openInputStream(imageUri);
-                    Drawable drawable = Drawable.createFromStream(inputStream, "");
-                    drawables.add(drawable);
-                } catch (FileNotFoundException e) {
-                    e.printStackTrace();
-                }
-                 */
             }
 
-            try {
-                new Thread(new Runnable() {
-                    @Override
-                    public void run() {
-                        for (final Drawable drawable : drawables) {
-                            runOnUiThread(new Runnable() {
-                                @Override
-                                public void run() {
-                                    images.add(drawable);
-                                    adapter = new RecyclerAdapter(images, getBaseContext());
-                                    recyclerView.setAdapter(adapter);
-                                }
-                            });
-                        }
-
-                    }
-                }).start();
-            } catch (Exception e) {
-                Toast.makeText(MainActivity.this, "Error adding holder", Toast.LENGTH_LONG).show();
-            }
+            adapter = new RecyclerAdapter(imagesUri, getBaseContext());
+            recyclerView.setAdapter(adapter);
         }
     }
 

@@ -1,34 +1,30 @@
 package com.example.myapplication;
 
 import android.content.Intent;
-import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
-import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import java.io.FileNotFoundException;
-import java.io.InputStream;
+import com.bumptech.glide.Glide;
+import com.jsibbold.zoomage.ZoomageView;
 
 public class ImageFullSize extends AppCompatActivity {
 
-    ImageView imageView;
-
+    ZoomageView imageView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_image_full_size);
         Intent intent = getIntent();
         Uri uri = Uri.parse(intent.getStringExtra("uri"));
-        InputStream inputStream = null;
-        try {
-            inputStream = getContentResolver().openInputStream(uri);
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
-        Drawable drawable = Drawable.createFromStream(inputStream, "");
-        imageView = (ImageView) findViewById(R.id.imageFullSize);
-        imageView.setImageDrawable(drawable);
+        imageView = (ZoomageView) findViewById(R.id.imageFullSize);
+        Glide
+                .with(this)
+                .load(uri)
+                //.transition(GenericTransitionOptions.<Drawable>with(R.anim.up_from_bottom))
+                .into(imageView)
+        ;
     }
+
 }

@@ -21,9 +21,10 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:testOnly="true"
-        android:theme="@style/AppTheme" >
-        <activity android:name="com.example.myapplication.SplashActivity" >
+        android:testOnly="true" >
+        <activity
+            android:name="com.example.myapplication.SplashActivity"
+            android:theme="@style/MainActivityTheme" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <action android:name="android.intent.action.SEARCH" />
@@ -31,8 +32,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.myapplication.ImageFullSize" />
-        <activity android:name="com.example.myapplication.MainActivity" >
+        <activity
+            android:name="com.example.myapplication.ImageFullSize"
+            android:theme="@style/FullSizeImageTheme" />
+        <activity
+            android:name="com.example.myapplication.MainActivity"
+            android:theme="@style/MainActivityTheme" >
             <intent-filter>
                 <action android:name="android.intent.action.SEARCH" />
             </intent-filter>
