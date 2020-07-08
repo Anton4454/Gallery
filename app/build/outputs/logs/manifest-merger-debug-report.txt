@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:2:1-34:12
-INJECTED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:2:1-34:12
-INJECTED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:2:1-34:12
-INJECTED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:2:1-34:12
+ADDED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:2:1-35:12
+INJECTED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:2:1-35:12
+INJECTED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:2:1-35:12
+INJECTED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:2:1-35:12
 MERGED from [com.github.bumptech.glide:glide:4.11.0] C:\Users\azyuz\.gradle\caches\transforms-2\files-2.1\b05b2a738edf8b82097cbcc8ce0cfd69\jetified-glide-4.11.0\AndroidManifest.xml:2:1-12:12
 MERGED from [com.jsibbold:zoomage:1.3.1] C:\Users\azyuz\.gradle\caches\transforms-2\files-2.1\dc4963eb984cd5e6c70baf06caf90c8d\jetified-zoomage-1.3.1\AndroidManifest.xml:2:1-11:12
 MERGED from [com.miguelcatalan:materialsearchview:1.4.0] C:\Users\azyuz\.gradle\caches\transforms-2\files-2.1\18a6f13d728959421b819abb6421cef8\jetified-materialsearchview-1.4.0\AndroidManifest.xml:2:1-13:12
@@ -45,20 +45,20 @@ MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\azyuz\.gradle\caches
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\azyuz\.gradle\caches\transforms-2\files-2.1\ed8cc0ac00b11c0234ef1e5a578c70c1\lifecycle-livedata-2.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\azyuz\.gradle\caches\transforms-2\files-2.1\df4d09f70e3f533a2fede8f96085147c\lifecycle-livedata-core-2.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\azyuz\.gradle\caches\transforms-2\files-2.1\c16c855844b564ee7204d4d6005470fb\core-runtime-2.0.0\AndroidManifest.xml:17:1-22:12
-INJECTED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:2:1-34:12
-INJECTED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:2:1-34:12
-INJECTED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:2:1-34:12
+INJECTED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:2:1-35:12
+INJECTED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:2:1-35:12
+INJECTED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:2:1-35:12
 	package
 		ADDED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:3:5-40
 		INJECTED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml
 		INJECTED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml
-		ADDED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:2:1-34:12
+		ADDED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:2:1-35:12
 		INJECTED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml
-		ADDED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:2:1-34:12
+		ADDED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:2:1-35:12
 		INJECTED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:2:11-69
@@ -71,7 +71,7 @@ ADDED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:6:5-66
 	android:name
 		ADDED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:6:22-63
 application
-ADDED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:8:5-32:19
+ADDED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:8:5-33:19
 MERGED from [com.github.bumptech.glide:glide:4.11.0] C:\Users\azyuz\.gradle\caches\transforms-2\files-2.1\b05b2a738edf8b82097cbcc8ce0cfd69\jetified-glide-4.11.0\AndroidManifest.xml:10:5-20
 MERGED from [com.github.bumptech.glide:glide:4.11.0] C:\Users\azyuz\.gradle\caches\transforms-2\files-2.1\b05b2a738edf8b82097cbcc8ce0cfd69\jetified-glide-4.11.0\AndroidManifest.xml:10:5-20
 MERGED from [com.miguelcatalan:materialsearchview:1.4.0] C:\Users\azyuz\.gradle\caches\transforms-2\files-2.1\18a6f13d728959421b819abb6421cef8\jetified-materialsearchview-1.4.0\AndroidManifest.xml:11:5-20
@@ -88,6 +88,8 @@ MERGED from [androidx.core:core:1.1.0] C:\Users\azyuz\.gradle\caches\transforms-
 MERGED from [androidx.core:core:1.1.0] C:\Users\azyuz\.gradle\caches\transforms-2\files-2.1\03736cf4bc3669a69d502627b70a527e\core-1.1.0\AndroidManifest.xml:24:5-89
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\azyuz\.gradle\caches\transforms-2\files-2.1\3c1a5ebf565097fe10667d6b9a2c1703\versionedparcelable-1.1.0\AndroidManifest.xml:24:5-25:19
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\azyuz\.gradle\caches\transforms-2\files-2.1\3c1a5ebf565097fe10667d6b9a2c1703\versionedparcelable-1.1.0\AndroidManifest.xml:24:5-25:19
+	android:requestLegacyExternalStorage
+		ADDED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:15:9-52
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.1.0] C:\Users\azyuz\.gradle\caches\transforms-2\files-2.1\03736cf4bc3669a69d502627b70a527e\core-1.1.0\AndroidManifest.xml:24:18-86
 	android:supportsRtl
@@ -103,39 +105,39 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\az
 	android:allowBackup
 		ADDED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:9:9-35
 activity#com.example.myapplication.SplashActivity
-ADDED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:15:9-23:20
+ADDED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:16:9-24:20
 	android:theme
-		ADDED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:16:13-53
+		ADDED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:17:13-53
 	android:name
-		ADDED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:15:19-49
+		ADDED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:16:19-49
 intent-filter#action:name:android.intent.action.MAIN+action:name:android.intent.action.SEARCH+category:name:android.intent.category.LAUNCHER
-ADDED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:17:13-22:25
+ADDED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:18:13-23:25
 action#android.intent.action.MAIN
-ADDED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:18:13-65
+ADDED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:19:13-65
 	android:name
-		ADDED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:18:21-62
+		ADDED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:19:21-62
 action#android.intent.action.SEARCH
-ADDED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:19:13-67
+ADDED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:20:13-67
 	android:name
-		ADDED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:19:21-64
+		ADDED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:20:21-64
 category#android.intent.category.LAUNCHER
-ADDED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:21:13-73
+ADDED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:22:13-73
 	android:name
-		ADDED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:21:23-70
+		ADDED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:22:23-70
 activity#com.example.myapplication.ImageFullSize
-ADDED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:24:9-25:56
+ADDED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:25:9-26:56
 	android:theme
-		ADDED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:25:13-54
+		ADDED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:26:13-54
 	android:name
-		ADDED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:24:19-48
+		ADDED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:25:19-48
 activity#com.example.myapplication.MainActivity
-ADDED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:26:9-31:20
+ADDED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:27:9-32:20
 	android:theme
-		ADDED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:27:13-53
+		ADDED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:28:13-53
 	android:name
-		ADDED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:26:19-47
+		ADDED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:27:19-47
 intent-filter#action:name:android.intent.action.SEARCH
-ADDED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:28:13-30:29
+ADDED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:29:13-31:29
 uses-sdk
 INJECTED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml

@@ -1,22 +1,21 @@
 package com.example.myapplication;
 
 import android.Manifest;
-import android.content.ClipData;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.VibrationEffect;
 import android.os.Vibrator;
 import android.view.View;
-import android.widget.Button;
+import android.widget.Toast;
 
-import androidx.annotation.Nullable;
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -26,7 +25,7 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
 
 
-    final int REQUEST_EXTERNAL_STORAGE = 100;
+    final int REQUEST_EXTERNAL_STORAGE = 101;
 
     RecyclerView recyclerView;
 
@@ -36,13 +35,14 @@ public class MainActivity extends AppCompatActivity {
 
     private RecyclerView.LayoutManager layoutManager;
 
+    @RequiresApi(api = Build.VERSION_CODES.Q)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
         layoutManager = new GridLayoutManager(this, 3);
-        recyclerView.setHasFixedSize(false);
+        recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.addOnItemTouchListener(
                 new RecyclerItemClickListener(this, recyclerView, new RecyclerItemClickListener.OnItemClickListener() {
@@ -73,46 +73,44 @@ public class MainActivity extends AppCompatActivity {
                 })
         );
 
-        final Button button = findViewById(R.id.button);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (ActivityCompat.checkSelfPermission(MainActivity.this, Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
-                    ActivityCompat.requestPermissions(MainActivity.this, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, REQUEST_EXTERNAL_STORAGE);
-//                    return;
-                } else {
-                    launchGalleryIntent();
-                }
-            }
-        });
+        if (ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.READ_EXTERNAL_STORAGE)
+                != PackageManager.PERMISSION_GRANTED){
+            ActivityCompat.requestPermissions(MainActivity.this,
+                    new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, REQUEST_EXTERNAL_STORAGE);
+        } else {
+            loadImages();
+        }
     }
 
-    public void launchGalleryIntent() {
-        Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
-        intent.putExtra(Intent.EXTRA_ALLOW_MULTIPLE, true);
-        intent.setType("image/*");
-        startActivityForResult(intent, REQUEST_EXTERNAL_STORAGE);
+    @RequiresApi(api = Build.VERSION_CODES.Q)
+    private void loadImages(){
+        imagesUri = ImagesGallery.listOfImages(this);
+        Toast.makeText(this, "SIZE = " + imagesUri.size(), Toast.LENGTH_LONG).show();
+        adapter = new RecyclerAdapter(imagesUri, this);
+        recyclerView.setAdapter(adapter);
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.Q)
     @Override
     public void onRequestPermissionsResult(int requestCode,
                                            String[] permissions, int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
         switch (requestCode) {
             case REQUEST_EXTERNAL_STORAGE: {
                 //permission granted
                 if (grantResults.length > 0
                         && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                    launchGalleryIntent();
+                    loadImages();
                 } else {
-                    //permission denied
+                    Toast.makeText(this, "Permission denied!", Toast.LENGTH_LONG).show();
                 }
                 return;
             }
-
         }
     }
 
 
+    /*
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -134,6 +132,5 @@ public class MainActivity extends AppCompatActivity {
             recyclerView.setAdapter(adapter);
         }
     }
-
-
+     */
 }

@@ -46,11 +46,10 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ImageV
         Glide
                 .with(context)
                 .load(image_id)
-                .override(400,300)
+                .override(600,600)
                 .centerInside()
                 .into(holder.Album)
         ;
-
     }
 
     @Override

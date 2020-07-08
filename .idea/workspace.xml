@@ -23,8 +23,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d837ba49-5801-401c-90a3-20244cf3c30a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_jsibbold_zoomage_1_3_1_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/backgroundimg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/myapplication/ImagesGallery.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.bin" afterDir="false" />
@@ -35,87 +34,43 @@
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/javaCompile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/app/app.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/debug.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/debug.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/debug.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/debug.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/bundle_manifest/debug/bundle-manifest/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/bundle_manifest/debug/bundle-manifest/AndroidManifest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/compile_and_runtime_not_namespaced_r_class_jar/debug/R.jar" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/compile_and_runtime_not_namespaced_r_class_jar/debug/R.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/dex/debug/mergeExtDexDebug/classes.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/dex/debug/mergeExtDexDebug/classes.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/dex/debug/mergeProjectDexDebug/classes.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/dex/debug/mergeProjectDexDebug/classes.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/dex_archive_input_jar_hashes/debug/out" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/dex_archive_input_jar_hashes/debug/out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeJavaRes/merge-state" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeJavaRes/merge-state" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/B4pB4ZjX5hDCN9Ny1OZY8whZWUs=" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/B4pB4ZjX5hDCN9Ny1OZY8whZWUs=" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/LXH5RCgP+Ck9aP6If2xtupOZD1o=" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/LXH5RCgP+Ck9aP6If2xtupOZD1o=" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/UdPzQEZrCK_Biyn3N6FqEpEy_W0=" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/UdPzQEZrCK_Biyn3N6FqEpEy_W0=" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/cIcZI3ukvxgB45yf7736Tx_mizk=" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/cIcZI3ukvxgB45yf7736Tx_mizk=" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/ryrZZfMhpJ3jvnhipl_+aeIJKBs=" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/ryrZZfMhpJ3jvnhipl_+aeIJKBs=" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/tWaJDKJhO4gf4IDbq0wx+8XeG+A=" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/tWaJDKJhO4gf4IDbq0wx+8XeG+A=" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/uBunBmqdKXw0bxTgFctQfvzNqeM=" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/uBunBmqdKXw0bxTgFctQfvzNqeM=" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/utEn96Dvy0zq1DR6jTCjBcXWrEA=" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/utEn96Dvy0zq1DR6jTCjBcXWrEA=" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeNativeLibs/merge-state" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeNativeLibs/merge-state" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeNativeLibs/zip-cache/B4pB4ZjX5hDCN9Ny1OZY8whZWUs=" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeNativeLibs/zip-cache/B4pB4ZjX5hDCN9Ny1OZY8whZWUs=" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeNativeLibs/zip-cache/LXH5RCgP+Ck9aP6If2xtupOZD1o=" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeNativeLibs/zip-cache/LXH5RCgP+Ck9aP6If2xtupOZD1o=" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeNativeLibs/zip-cache/UdPzQEZrCK_Biyn3N6FqEpEy_W0=" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeNativeLibs/zip-cache/UdPzQEZrCK_Biyn3N6FqEpEy_W0=" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeNativeLibs/zip-cache/cIcZI3ukvxgB45yf7736Tx_mizk=" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeNativeLibs/zip-cache/cIcZI3ukvxgB45yf7736Tx_mizk=" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeNativeLibs/zip-cache/ryrZZfMhpJ3jvnhipl_+aeIJKBs=" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeNativeLibs/zip-cache/ryrZZfMhpJ3jvnhipl_+aeIJKBs=" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeNativeLibs/zip-cache/tWaJDKJhO4gf4IDbq0wx+8XeG+A=" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeNativeLibs/zip-cache/tWaJDKJhO4gf4IDbq0wx+8XeG+A=" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeNativeLibs/zip-cache/uBunBmqdKXw0bxTgFctQfvzNqeM=" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeNativeLibs/zip-cache/uBunBmqdKXw0bxTgFctQfvzNqeM=" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeNativeLibs/zip-cache/utEn96Dvy0zq1DR6jTCjBcXWrEA=" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeNativeLibs/zip-cache/utEn96Dvy0zq1DR6jTCjBcXWrEA=" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/merger.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/merger.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/tmp/debug/zip-cache/androidResources" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/tmp/debug/zip-cache/androidResources" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/tmp/debug/zip-cache/javaResources0" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/tmp/debug/zip-cache/javaResources0" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/instant_app_manifest/debug/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/instant_app_manifest/debug/AndroidManifest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/myapplication/ImageFullSize.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/myapplication/ImageFullSize.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/myapplication/MainActivity$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/myapplication/MainActivity$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/myapplication/MainActivity$2$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/myapplication/MainActivity$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/myapplication/MainActivity$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/myapplication/MainActivity$3$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/myapplication/MainActivity$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/myapplication/MainActivity$2.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/myapplication/MainActivity.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/myapplication/MainActivity.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/myapplication/RecyclerAdapter$ImageViewHolder.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/myapplication/RecyclerAdapter$ImageViewHolder.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/myapplication/RecyclerAdapter.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/myapplication/RecyclerAdapter.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/manifest_merge_blame_file/debug/manifest-merger-blame-debug-report.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/manifest_merge_blame_file/debug/manifest-merger-blame-debug-report.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_java_res/debug/out.jar" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_java_res/debug/out.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_manifests/debug/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_manifests/debug/AndroidManifest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/processed_res/debug/out/resources-debug.ap_" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/processed_res/debug/out/resources-debug.ap_" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/983570f2f469e89ea7573ce3a8933482c3fb16f8318ed70eaa278a94ab916b71_0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/983570f2f469e89ea7573ce3a8933482c3fb16f8318ed70eaa278a94ab916b71_1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/983570f2f469e89ea7573ce3a8933482c3fb16f8318ed70eaa278a94ab916b71_2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/983570f2f469e89ea7573ce3a8933482c3fb16f8318ed70eaa278a94ab916b71_3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/3a0fecb0f9dc356756efb439f7906933035e833f270dcda998c1cc7d92d169a5_0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/3a0fecb0f9dc356756efb439f7906933035e833f270dcda998c1cc7d92d169a5_1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/3a0fecb0f9dc356756efb439f7906933035e833f270dcda998c1cc7d92d169a5_2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/3a0fecb0f9dc356756efb439f7906933035e833f270dcda998c1cc7d92d169a5_3.jar" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/myapplication/ImageFullSize.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/myapplication/ImageFullSize.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/myapplication/MainActivity$1.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/myapplication/MainActivity$1.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/myapplication/MainActivity$2$1.dex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/myapplication/MainActivity$2.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/myapplication/MainActivity$2.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/myapplication/MainActivity$3$1.dex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/myapplication/MainActivity$3.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/myapplication/MainActivity$2.dex" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/myapplication/MainActivity.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/myapplication/MainActivity.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/myapplication/RecyclerAdapter$ImageViewHolder.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/myapplication/RecyclerAdapter$ImageViewHolder.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/myapplication/RecyclerAdapter.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/myapplication/RecyclerAdapter.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/anim_up_from_bottom.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/anim_up_from_bottom.xml.flat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_activity_image_full_size.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_activity_image_full_size.xml.flat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values_values.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values_values.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_activity_main.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_activity_main.xml.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_album_layout.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_album_layout.xml.flat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/runtime_symbol_list/debug/R.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/runtime_symbol_list/debug/R.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/symbol_list_with_package_name/debug/package-aware-r.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/symbol_list_with_package_name/debug/package-aware-r.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/outputs/apk/debug/app-debug.apk" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/outputs/apk/debug/app-debug.apk" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/outputs/logs/manifest-merger-debug-report.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/outputs/logs/manifest-merger-debug-report.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/myapplication/ImageFullSize.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/myapplication/ImageFullSize.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/myapplication/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/myapplication/MainActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/myapplication/RecyclerAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/myapplication/RecyclerAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/anim/up_from_bottom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/anim/up_from_bottom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_image_full_size.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_image_full_size.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/album_layout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/album_layout.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,7 +80,7 @@
   <component name="CodeInsightWorkspaceSettings">
     <option name="optimizeImportsOnTheFly" value="true" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="R58M71S1NWW" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="Pixel_2_Pie_9.0_-_API_28" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -145,8 +100,8 @@
         <option value="layoutResourceFile_vertical" />
         <option value="valueResourceFile" />
         <option value="resourceFile" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -161,6 +116,8 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="R58M71S1NWW" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2020-07-08T13:04:06.110Z" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="ToolWindowBuild.ShowToolbar" value="false" />
@@ -168,27 +125,30 @@
     <property name="android.project.structure.proportion" value="0.15" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/res/drawable-v24" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/GalleryImages" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
     <key name="ExtractSuperBase.RECENT_KEYS">
       <recent name="com.example.myapplication" />
     </key>
-    <key name="android.template.-275471323">
-      <recent name="com.example.myapplication" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\azyuz\OneDrive\Desktop\MyApplication\app\src\main\res\drawable-v24" />
-    </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.example.myapplication" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\dev\MyApplication\app\src\main\res\drawable" />
       <recent name="C:\dev\MyApplication\app\src\main\res\raw" />
       <recent name="C:\dev\MyApplication\app\src\main\res\drawable-v24" />
       <recent name="C:\Users\azyuz\OneDrive\Desktop\MyApplication\app\src\main\res\raw" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.example.myapplication" />
+    </key>
+    <key name="android.template.-275471323">
+      <recent name="com.example.myapplication" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.example.myapplication" />
     </key>
   </component>
   <component name="RunManager">
@@ -277,10 +237,10 @@
       <screen x="0" y="46" width="1920" height="1034" />
     </state>
     <state x="791" y="434" width="341" height="258" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/0.46.1920.1034@0.46.1920.1034" timestamp="1593973578701" />
-    <state x="690" y="309" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1594068054720">
+    <state x="690" y="309" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1594210673457">
       <screen x="0" y="46" width="1920" height="1034" />
     </state>
-    <state x="690" y="309" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.46.1920.1034/0.-1040.1920.1040@0.46.1920.1034" timestamp="1594068054720" />
+    <state x="690" y="309" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.46.1920.1034/0.-1040.1920.1040@0.46.1920.1034" timestamp="1594210673457" />
     <state x="690" y="309" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog" timestamp="1594041776795">
       <screen x="0" y="46" width="1920" height="1034" />
     </state>
@@ -297,27 +257,27 @@
       <screen x="0" y="46" width="1920" height="1034" />
     </state>
     <state x="818" y="375" key="AndroidCreateXmlResourceDialog/0.46.1920.1034/0.-1040.1920.1040@0.46.1920.1034" timestamp="1593678835770" />
-    <state x="893" y="-723" key="FileChooserDialogImpl" timestamp="1593521520618">
-      <screen x="0" y="-1040" width="1920" height="1040" />
+    <state x="893" y="361" key="FileChooserDialogImpl" timestamp="1594205849091">
+      <screen x="0" y="46" width="1920" height="1034" />
     </state>
     <state x="893" y="-723" key="FileChooserDialogImpl/0.46.1920.1034/0.-1040.1920.1040@0.-1040.1920.1040" timestamp="1593521520618" />
-    <state x="893" y="361" key="FileChooserDialogImpl/0.46.1920.1034/0.-1040.1920.1040@0.46.1920.1034" timestamp="1593368440902" />
-    <state width="1877" height="130" key="GridCell.Tab.0.bottom" timestamp="1594046369817">
+    <state x="893" y="361" key="FileChooserDialogImpl/0.46.1920.1034/0.-1040.1920.1040@0.46.1920.1034" timestamp="1594205849091" />
+    <state width="969" height="170" key="GridCell.Tab.0.bottom" timestamp="1594213890858">
       <screen x="0" y="46" width="1920" height="1034" />
     </state>
-    <state width="1877" height="130" key="GridCell.Tab.0.bottom/0.46.1920.1034/0.-1040.1920.1040@0.46.1920.1034" timestamp="1594046369817" />
-    <state width="1877" height="130" key="GridCell.Tab.0.center" timestamp="1594046369816">
+    <state width="969" height="170" key="GridCell.Tab.0.bottom/0.46.1920.1034/0.-1040.1920.1040@0.46.1920.1034" timestamp="1594213890858" />
+    <state width="969" height="170" key="GridCell.Tab.0.center" timestamp="1594213890858">
       <screen x="0" y="46" width="1920" height="1034" />
     </state>
-    <state width="1877" height="130" key="GridCell.Tab.0.center/0.46.1920.1034/0.-1040.1920.1040@0.46.1920.1034" timestamp="1594046369816" />
-    <state width="1877" height="130" key="GridCell.Tab.0.left" timestamp="1594046369816">
+    <state width="969" height="170" key="GridCell.Tab.0.center/0.46.1920.1034/0.-1040.1920.1040@0.46.1920.1034" timestamp="1594213890858" />
+    <state width="969" height="170" key="GridCell.Tab.0.left" timestamp="1594213890858">
       <screen x="0" y="46" width="1920" height="1034" />
     </state>
-    <state width="1877" height="130" key="GridCell.Tab.0.left/0.46.1920.1034/0.-1040.1920.1040@0.46.1920.1034" timestamp="1594046369816" />
-    <state width="1877" height="130" key="GridCell.Tab.0.right" timestamp="1594046369817">
+    <state width="969" height="170" key="GridCell.Tab.0.left/0.46.1920.1034/0.-1040.1920.1040@0.46.1920.1034" timestamp="1594213890858" />
+    <state width="969" height="170" key="GridCell.Tab.0.right" timestamp="1594213890858">
       <screen x="0" y="46" width="1920" height="1034" />
     </state>
-    <state width="1877" height="130" key="GridCell.Tab.0.right/0.46.1920.1034/0.-1040.1920.1040@0.46.1920.1034" timestamp="1594046369817" />
+    <state width="969" height="170" key="GridCell.Tab.0.right/0.46.1920.1034/0.-1040.1920.1040@0.46.1920.1034" timestamp="1594213890858" />
     <state x="461" y="205" key="SettingsEditor" timestamp="1593635119454">
       <screen x="0" y="46" width="1920" height="1034" />
     </state>
@@ -352,9 +312,9 @@
     </state>
     <state x="616" y="262" key="run.anything.popup/0.46.1920.1034/0.-1040.1920.1040@0.46.1920.1034" timestamp="1593634801096" />
     <state x="616" y="262" key="run.anything.popup/0.46.1920.1034@0.46.1920.1034" timestamp="1593764299459" />
-    <state x="623" y="269" width="672" height="678" key="search.everywhere.popup" timestamp="1593688168865">
+    <state x="623" y="269" width="672" height="678" key="search.everywhere.popup" timestamp="1594211248974">
       <screen x="0" y="46" width="1920" height="1034" />
     </state>
-    <state x="623" y="269" width="672" height="678" key="search.everywhere.popup/0.46.1920.1034/0.-1040.1920.1040@0.46.1920.1034" timestamp="1593688168865" />
+    <state x="623" y="269" width="672" height="678" key="search.everywhere.popup/0.46.1920.1034/0.-1040.1920.1040@0.46.1920.1034" timestamp="1594211248974" />
   </component>
 </project>
