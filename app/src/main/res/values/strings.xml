@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">My Application</string>
     <string name="load_image">Load image</string>
+    <string name="favorite">Избранное</string>
+    <string name="video">Видео</string>
+    <string name="albums">Альбомы</string>
+    <string name="pictures">Картинки</string>
 </resources>

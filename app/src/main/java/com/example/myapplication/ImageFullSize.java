@@ -17,7 +17,7 @@ public class ImageFullSize extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_image_full_size);
         Intent intent = getIntent();
-        Uri uri = Uri.parse(intent.getStringExtra("uri"));
+        String uri = intent.getStringExtra("uri");
         imageView = (ZoomageView) findViewById(R.id.imageFullSize);
         Glide
                 .with(this)

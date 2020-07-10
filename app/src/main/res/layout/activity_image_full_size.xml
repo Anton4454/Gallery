@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ImageFullSize"
-    android:background="@color/colorBackground">
+    android:id="@+id/imageFS"
+    android:background="@color/darkBackground">
 
     <com.jsibbold.zoomage.ZoomageView
         android:id="@+id/imageFullSize"

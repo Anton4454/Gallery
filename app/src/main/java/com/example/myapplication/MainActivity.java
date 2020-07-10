@@ -4,12 +4,13 @@ import android.Manifest;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.VibrationEffect;
 import android.os.Vibrator;
 import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.RequiresApi;
@@ -28,9 +29,17 @@ public class MainActivity extends AppCompatActivity {
     final int REQUEST_EXTERNAL_STORAGE = 101;
 
     RecyclerView recyclerView;
+    TextView menuText;
+    Button picturesButton;
+    Button favoriteButton;
+    Button videoButton;
+    Button albumsButton;
 
-    private List<Uri> imagesUri = new ArrayList<>();
+    private List<String> imagesUri = new ArrayList<>();
+    private List<String> favoriteImagesUri = new ArrayList<>();
+    private List<String> videos = new ArrayList<>();
 
+    private String countMenu = "pictures";
     private RecyclerAdapter adapter;
 
     private RecyclerView.LayoutManager layoutManager;
@@ -40,6 +49,52 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        picturesButton = (Button) findViewById(R.id.picturesButton);
+        picturesButton.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        countMenu = "pictures";
+                        newMenu();
+                    }
+                }
+        );
+
+        favoriteButton = (Button) findViewById(R.id.favoriteButton);
+        favoriteButton.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        countMenu = "favorite";
+                        newMenu();
+                    }
+                }
+        );
+
+        videoButton = (Button) findViewById(R.id.videosButton);
+        videoButton.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        countMenu = "videos";
+                        newMenu();
+                    }
+                }
+        );
+
+        albumsButton = (Button) findViewById(R.id.albumsButton);
+        albumsButton.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        countMenu = "albums";
+                        newMenu();
+                    }
+                }
+        );
+
+        menuText = (TextView) findViewById(R.id.menuTypeView);
         recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
         layoutManager = new GridLayoutManager(this, 3);
         recyclerView.setHasFixedSize(true);
@@ -48,33 +103,38 @@ public class MainActivity extends AppCompatActivity {
                 new RecyclerItemClickListener(this, recyclerView, new RecyclerItemClickListener.OnItemClickListener() {
                     @Override
                     public void onItemClick(View view, int position) {
-                        Uri uri = imagesUri.get(position);
+                        String uri = imagesUri.get(position);;
+                        if (countMenu == "pictures") {
+                            //...
+                        }
+                        else if (countMenu == "favorite"){
+                            uri = favoriteImagesUri.get(position);
+                        }
+                        else if (countMenu == "videos"){
+                            uri = videos.get(position);
+                        }
                         Intent intent = new Intent(getBaseContext(), ImageFullSize.class);
-                        intent.putExtra("uri", uri.toString());
+                        intent.putExtra("uri", uri);
                         startActivity(intent);
                     }
+
 
                     @Override
                     public void onLongItemClick(View view, int position) {
                         Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
-                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O && countMenu == "pictures") {
                             v.vibrate(VibrationEffect.createOneShot(100, VibrationEffect.DEFAULT_AMPLITUDE));
+                            favoriteImagesUri.add(imagesUri.get(position));
+                            Toast.makeText(getBaseContext(), "Add to favorite", Toast.LENGTH_SHORT).show();
                         } else {
                             v.vibrate(100);
                         }
-                        ArrayList<Uri> imageUris = new ArrayList<Uri>();
-                        imageUris.add(imagesUri.get(position));
-                        Intent shareIntent = new Intent();
-                        shareIntent.setAction(Intent.ACTION_SEND_MULTIPLE);
-                        shareIntent.putParcelableArrayListExtra(Intent.EXTRA_STREAM, imageUris);
-                        shareIntent.setType("image/*");
-                        startActivity(Intent.createChooser(shareIntent, "Share images to.."));
                     }
                 })
         );
 
         if (ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.READ_EXTERNAL_STORAGE)
-                != PackageManager.PERMISSION_GRANTED){
+                != PackageManager.PERMISSION_GRANTED) {
             ActivityCompat.requestPermissions(MainActivity.this,
                     new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, REQUEST_EXTERNAL_STORAGE);
         } else {
@@ -82,12 +142,24 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+
     @RequiresApi(api = Build.VERSION_CODES.Q)
-    private void loadImages(){
+    private void loadImages() {
         imagesUri = ImagesGallery.listOfImages(this);
-        Toast.makeText(this, "SIZE = " + imagesUri.size(), Toast.LENGTH_LONG).show();
-        adapter = new RecyclerAdapter(imagesUri, this);
+        adapter = new RecyclerAdapter(imagesUri, countMenu, this);
         recyclerView.setAdapter(adapter);
+    }
+
+    private void loadFavoriteImages() {
+        adapter = new RecyclerAdapter(favoriteImagesUri, countMenu, this);
+        recyclerView.setAdapter(adapter);
+    }
+
+    @RequiresApi(api = Build.VERSION_CODES.Q)
+    private void loadVideos(){
+        videos = VideoGallery.listOfImages(this);
+        RecyclerAdapter adapter1 = new RecyclerAdapter(videos, countMenu, VideoDuration.listOfDuration(this), this);
+        recyclerView.setAdapter(adapter1);
     }
 
     @RequiresApi(api = Build.VERSION_CODES.Q)
@@ -109,28 +181,31 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-
-    /*
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == REQUEST_EXTERNAL_STORAGE && resultCode == RESULT_OK) {
-            final List<Drawable> drawables = new ArrayList<>();
-            ClipData clipData = data.getClipData();
-
-            if (clipData != null) {
-                for (int i = 0; i < clipData.getItemCount(); i++) {
-                    Uri imageUri = clipData.getItemAt(i).getUri();
-                    imagesUri.add(imageUri);
-                }
-            } else {
-                Uri imageUri = data.getData();
-                imagesUri.add(imageUri);
+    @RequiresApi(api = Build.VERSION_CODES.Q)
+    private void newMenu() {
+        switch (countMenu) {
+            case "pictures": {
+                loadImages();
+                menuText.setText("Картинки");
+                break;
             }
 
-            adapter = new RecyclerAdapter(imagesUri, getBaseContext());
-            recyclerView.setAdapter(adapter);
+            case "favorite": {
+                loadFavoriteImages();
+                menuText.setText("Избранное");
+                break;
+            }
+
+            case "videos": {
+                loadVideos();
+                menuText.setText("Видео");
+                break;
+            }
+
+            case "albums": {
+                //loadAlbums();
+                break;
+            }
         }
     }
-     */
 }

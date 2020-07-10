@@ -13,11 +13,11 @@ import java.util.List;
 
 public class ImagesGallery {
     @RequiresApi(api = Build.VERSION_CODES.Q)
-    public static List<Uri> listOfImages(Context context){
+    public static List<String> listOfImages(Context context){
         Uri uri;
         Cursor cursor;
         int column_index_data, column_index_folder_name;
-        List<Uri> listOfAllImages = new ArrayList<>();
+        List<String> listOfAllImages = new ArrayList<>();
         String absolutePathOfImage;
         uri = MediaStore.Images.Media.EXTERNAL_CONTENT_URI;
 
@@ -37,7 +37,7 @@ public class ImagesGallery {
         while (cursor.moveToNext()){
             absolutePathOfImage = cursor.getString(column_index_data);
 
-            listOfAllImages.add(Uri.parse(absolutePathOfImage));
+            listOfAllImages.add(absolutePathOfImage);
         }
 
         return listOfAllImages;

@@ -8,14 +8,80 @@
     android:voiceSearchMode="showVoiceSearchButton|launchRecognizer"
     android:searchSuggestAuthority="ru.phpnick.MySuggestionProvider"
     android:searchSuggestSelection=" ?"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:background="@color/darkBackground">
+
+
+    <TextView
+        android:id="@+id/menuTypeView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pictures"
+        android:textStyle="italic"
+        android:layout_gravity="center|top"
+        android:paddingTop="3dp"
+        android:textSize="35sp"
+        android:textColor="#ffffff"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
         android:scrollbars="vertical"
-        android:layout_gravity="center|top"/>
+        android:layout_gravity="center|top"
+        android:paddingBottom="55dp"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom">
+
+        <Button
+            android:clickable="true"
+            android:id="@+id/picturesButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/darkBackground"
+            android:text="@string/pictures"
+            android:textStyle="italic"
+            android:textColor="#ffffff"
+            android:focusable="true" />
+
+        <Button
+            android:clickable="true"
+            android:id="@+id/favoriteButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/darkBackground"
+            android:text="@string/favorite"
+            android:textStyle="italic"
+            android:textColor="#ffffff"/>
+
+        <Button
+            android:id="@+id/videosButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/darkBackground"
+            android:text="@string/video"
+            android:textStyle="italic"
+            android:textColor="#ffffff"/>
+
+        <Button
+            android:id="@+id/albumsButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/darkBackground"
+            android:text="@string/albums"
+            android:textStyle="italic"
+            android:textColor="#ffffff"/>
+    </LinearLayout>
+
 
 </FrameLayout>
