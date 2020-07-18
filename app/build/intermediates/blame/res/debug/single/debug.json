@@ -24,8 +24,16 @@
         "source": "C:\\dev\\MyApplication\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
     },
     {
+        "merged": "C:\\dev\\MyApplication\\app\\build\\intermediates\\res\\merged\\debug\\raw_menu_selected.json.flat",
+        "source": "C:\\dev\\MyApplication\\app\\src\\main\\res\\raw\\menu_selected.json"
+    },
+    {
         "merged": "C:\\dev\\MyApplication\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_image_full_size.xml.flat",
         "source": "C:\\dev\\MyApplication\\app\\src\\main\\res\\layout\\activity_image_full_size.xml"
+    },
+    {
+        "merged": "C:\\dev\\MyApplication\\app\\build\\intermediates\\res\\merged\\debug\\raw_loading_spinner.json.flat",
+        "source": "C:\\dev\\MyApplication\\app\\src\\main\\res\\raw\\loading_spinner.json"
     },
     {
         "merged": "C:\\dev\\MyApplication\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
@@ -56,6 +64,14 @@
         "source": "C:\\dev\\MyApplication\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
     },
     {
+        "merged": "C:\\dev\\MyApplication\\app\\build\\intermediates\\res\\merged\\debug\\layout_empty_view.xml.flat",
+        "source": "C:\\dev\\MyApplication\\app\\src\\main\\res\\layout\\empty_view.xml"
+    },
+    {
+        "merged": "C:\\dev\\MyApplication\\app\\build\\intermediates\\res\\merged\\debug\\layout_date_layout.xml.flat",
+        "source": "C:\\dev\\MyApplication\\app\\src\\main\\res\\layout\\date_layout.xml"
+    },
+    {
         "merged": "C:\\dev\\MyApplication\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_main.xml.flat",
         "source": "C:\\dev\\MyApplication\\app\\src\\main\\res\\layout\\activity_main.xml"
     },
@@ -70,10 +86,6 @@
     {
         "merged": "C:\\dev\\MyApplication\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
         "source": "C:\\dev\\MyApplication\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
-    },
-    {
-        "merged": "C:\\dev\\MyApplication\\app\\build\\intermediates\\res\\merged\\debug\\raw_fireworksound.mp3.flat",
-        "source": "C:\\dev\\MyApplication\\app\\src\\main\\res\\raw\\fireworksound.mp3"
     },
     {
         "merged": "C:\\dev\\MyApplication\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_round.png.flat",
@@ -96,7 +108,11 @@
         "source": "C:\\dev\\MyApplication\\app\\src\\main\\res\\drawable\\ic_launcher_background.xml"
     },
     {
-        "merged": "C:\\dev\\MyApplication\\app\\build\\intermediates\\res\\merged\\debug\\raw_fireworks.json.flat",
-        "source": "C:\\dev\\MyApplication\\app\\src\\main\\res\\raw\\fireworks.json"
+        "merged": "C:\\dev\\MyApplication\\app\\build\\intermediates\\res\\merged\\debug\\raw_dots.json.flat",
+        "source": "C:\\dev\\MyApplication\\app\\src\\main\\res\\raw\\dots.json"
+    },
+    {
+        "merged": "C:\\dev\\MyApplication\\app\\build\\intermediates\\res\\merged\\debug\\raw_loading1.json.flat",
+        "source": "C:\\dev\\MyApplication\\app\\src\\main\\res\\raw\\loading1.json"
     }
 ]

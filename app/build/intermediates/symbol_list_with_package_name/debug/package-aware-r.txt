@@ -1179,7 +1179,6 @@ id actions
 id activity_chooser_view_content
 id add
 id album
-id albumsButton
 id alertTitle
 id all
 id always
@@ -1207,6 +1206,7 @@ id contentPanel
 id coordinator
 id custom
 id customPanel
+id dateView
 id decor_content_parent
 id default_activity_button
 id design_bottom_sheet
@@ -1220,6 +1220,7 @@ id direct
 id disableHome
 id durationView
 id edit_query
+id emptyView
 id end
 id enterAlways
 id enterAlwaysCollapsed
@@ -1227,6 +1228,7 @@ id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
 id favoriteButton
+id favoriteSelect
 id fill
 id fill_horizontal
 id fill_vertical
@@ -1247,6 +1249,7 @@ id ifRoom
 id image
 id imageFS
 id imageFullSize
+id imagesSelect
 id info
 id invisible
 id italic
@@ -1319,6 +1322,7 @@ id search_top_bar
 id search_voice_btn
 id select_dialog_listview
 id selected
+id sharingText
 id shortcut
 id showCustom
 id showHome
@@ -1381,6 +1385,7 @@ id unlabeled
 id up
 id useLogo
 id videosButton
+id videosSelect
 id view_offset_helper
 id visible
 id withText
@@ -1445,6 +1450,7 @@ layout activity_main
 layout activity_splash
 layout album_layout
 layout custom_dialog
+layout date_layout
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
 layout design_layout_snackbar
@@ -1459,6 +1465,7 @@ layout design_navigation_item_subheader
 layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_password_icon
+layout empty_view
 layout mtrl_layout_snackbar
 layout mtrl_layout_snackbar_include
 layout notification_action
@@ -1475,9 +1482,11 @@ layout suggest_item
 layout support_simple_spinner_dropdown_item
 mipmap ic_launcher
 mipmap ic_launcher_round
-raw fireworks
-raw fireworksound
+raw dots
 raw loading
+raw loading1
+raw loading_spinner
+raw menu_selected
 string abc_action_bar_home_description
 string abc_action_bar_up_description
 string abc_action_menu_overflow_description
@@ -1525,6 +1534,7 @@ string path_password_strike_through
 string pictures
 string search_hint
 string search_menu_title
+string sharing
 string status_bar_notification_info_overflow
 string video
 style AlertDialog_AppCompat

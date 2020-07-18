@@ -12,8 +12,7 @@
     android:id="@+id/main"
     android:background="@color/darkBackground">
 
-
-    <TextView
+        <TextView
         android:id="@+id/menuTypeView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -31,13 +30,16 @@
         android:layout_marginTop="60dp"
         android:scrollbars="vertical"
         android:layout_gravity="center|top"
-        android:paddingBottom="55dp"/>
+        android:paddingBottom="80dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"/>
 
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom">
+        android:layout_gravity="bottom"
+        android:paddingBottom="20dp">
 
         <Button
             android:clickable="true"
@@ -71,16 +73,43 @@
             android:text="@string/video"
             android:textStyle="italic"
             android:textColor="#ffffff"/>
+    </LinearLayout>
 
-        <Button
-            android:id="@+id/albumsButton"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal"
+        android:layout_gravity="bottom|center">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/imagesSelect"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
             android:layout_weight="1"
-            android:background="@color/darkBackground"
-            android:text="@string/albums"
-            android:textStyle="italic"
-            android:textColor="#ffffff"/>
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/menu_selected"
+            android:layout_gravity="bottom">
+        </com.airbnb.lottie.LottieAnimationView>
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/favoriteSelect"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/menu_selected"
+            android:layout_gravity="bottom">
+        </com.airbnb.lottie.LottieAnimationView>
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/videosSelect"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/menu_selected"
+            android:layout_gravity="bottom">
+        </com.airbnb.lottie.LottieAnimationView>
     </LinearLayout>
 
 
