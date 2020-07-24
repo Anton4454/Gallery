@@ -40,8 +40,8 @@
 25        android:testOnly="true" >
 26        <activity
 26-->C:\dev\MyApplication\app\src\main\AndroidManifest.xml:16:9-24:20
-27            android:name="com.example.myapplication.SplashActivity"
-27-->C:\dev\MyApplication\app\src\main\AndroidManifest.xml:16:19-49
+27            android:name="SplashActivity.SplashActivity"
+27-->C:\dev\MyApplication\app\src\main\AndroidManifest.xml:16:19-63
 28            android:theme="@style/SplashStyle" >
 28-->C:\dev\MyApplication\app\src\main\AndroidManifest.xml:17:13-47
 29            <intent-filter>
@@ -60,14 +60,14 @@
 35        </activity>
 36        <activity
 36-->C:\dev\MyApplication\app\src\main\AndroidManifest.xml:25:9-26:56
-37            android:name="com.example.myapplication.ImageFullSize"
-37-->C:\dev\MyApplication\app\src\main\AndroidManifest.xml:25:19-48
+37            android:name="Images.ImageFullSize"
+37-->C:\dev\MyApplication\app\src\main\AndroidManifest.xml:25:19-54
 38            android:theme="@style/FullSizeImageTheme" />
 38-->C:\dev\MyApplication\app\src\main\AndroidManifest.xml:26:13-54
 39        <activity
 39-->C:\dev\MyApplication\app\src\main\AndroidManifest.xml:27:9-32:20
-40            android:name="com.example.myapplication.MainActivity"
-40-->C:\dev\MyApplication\app\src\main\AndroidManifest.xml:27:19-47
+40            android:name="MainActivity.MainActivity"
+40-->C:\dev\MyApplication\app\src\main\AndroidManifest.xml:27:19-59
 41            android:theme="@style/MainActivityTheme" >
 41-->C:\dev\MyApplication\app\src\main\AndroidManifest.xml:28:13-53
 42            <intent-filter>

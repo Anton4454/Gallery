@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="@color/darkBackground"
     android:orientation="vertical"
-    tools:context=".ImageFullSize">
+    tools:context="Images.ImageFullSize">
 
     <com.jsibbold.zoomage.ZoomageView
         android:id="@+id/imageFullSize"

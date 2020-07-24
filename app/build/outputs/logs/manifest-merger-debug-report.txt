@@ -104,12 +104,12 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\az
 		ADDED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:11:9-43
 	android:allowBackup
 		ADDED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:10:9-35
-activity#com.example.myapplication.SplashActivity
+activity#SplashActivity.SplashActivity
 ADDED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:16:9-24:20
 	android:theme
 		ADDED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:17:13-47
 	android:name
-		ADDED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:16:19-49
+		ADDED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:16:19-63
 intent-filter#action:name:android.intent.action.MAIN+action:name:android.intent.action.SEARCH+category:name:android.intent.category.LAUNCHER
 ADDED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:18:13-23:25
 action#android.intent.action.MAIN
@@ -124,18 +124,18 @@ category#android.intent.category.LAUNCHER
 ADDED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:22:13-73
 	android:name
 		ADDED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:22:23-70
-activity#com.example.myapplication.ImageFullSize
+activity#Images.ImageFullSize
 ADDED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:25:9-26:56
 	android:theme
 		ADDED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:26:13-54
 	android:name
-		ADDED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:25:19-48
-activity#com.example.myapplication.MainActivity
+		ADDED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:25:19-54
+activity#MainActivity.MainActivity
 ADDED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:27:9-32:20
 	android:theme
 		ADDED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:28:13-53
 	android:name
-		ADDED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:27:19-47
+		ADDED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:27:19-59
 intent-filter#action:name:android.intent.action.SEARCH
 ADDED from C:\dev\MyApplication\app\src\main\AndroidManifest.xml:29:13-31:29
 uses-sdk
