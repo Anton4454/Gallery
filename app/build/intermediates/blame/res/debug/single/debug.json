@@ -1,5 +1,9 @@
 [
     {
+        "merged": "C:\\dev\\MyApplication\\app\\build\\intermediates\\res\\merged\\debug\\drawable_heart.png.flat",
+        "source": "C:\\dev\\MyApplication\\app\\src\\main\\res\\drawable\\heart.png"
+    },
+    {
         "merged": "C:\\dev\\MyApplication\\app\\build\\intermediates\\res\\merged\\debug\\anim_up_from_bottom.xml.flat",
         "source": "C:\\dev\\MyApplication\\app\\src\\main\\res\\anim\\up_from_bottom.xml"
     },
@@ -8,8 +12,16 @@
         "source": "C:\\dev\\MyApplication\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
     },
     {
+        "merged": "C:\\dev\\MyApplication\\app\\build\\intermediates\\res\\merged\\debug\\drawable_gold_border.xml.flat",
+        "source": "C:\\dev\\MyApplication\\app\\src\\main\\res\\drawable\\gold_border.xml"
+    },
+    {
         "merged": "C:\\dev\\MyApplication\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
         "source": "C:\\dev\\MyApplication\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\dev\\MyApplication\\app\\build\\intermediates\\res\\merged\\debug\\drawable_share.png.flat",
+        "source": "C:\\dev\\MyApplication\\app\\src\\main\\res\\drawable\\share.png"
     },
     {
         "merged": "C:\\dev\\MyApplication\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_launcher_foreground.xml.flat",
@@ -28,12 +40,12 @@
         "source": "C:\\dev\\MyApplication\\app\\src\\main\\res\\raw\\menu_selected.json"
     },
     {
-        "merged": "C:\\dev\\MyApplication\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_image_full_size.xml.flat",
-        "source": "C:\\dev\\MyApplication\\app\\src\\main\\res\\layout\\activity_image_full_size.xml"
-    },
-    {
         "merged": "C:\\dev\\MyApplication\\app\\build\\intermediates\\res\\merged\\debug\\raw_loading_spinner.json.flat",
         "source": "C:\\dev\\MyApplication\\app\\src\\main\\res\\raw\\loading_spinner.json"
+    },
+    {
+        "merged": "C:\\dev\\MyApplication\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_image_full_size.xml.flat",
+        "source": "C:\\dev\\MyApplication\\app\\src\\main\\res\\layout\\activity_image_full_size.xml"
     },
     {
         "merged": "C:\\dev\\MyApplication\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
@@ -44,12 +56,12 @@
         "source": "C:\\dev\\MyApplication\\app\\src\\main\\res\\layout\\album_layout.xml"
     },
     {
-        "merged": "C:\\dev\\MyApplication\\app\\build\\intermediates\\res\\merged\\debug\\drawable_backgroundimg.png.flat",
-        "source": "C:\\dev\\MyApplication\\app\\src\\main\\res\\drawable\\backgroundimg.png"
-    },
-    {
         "merged": "C:\\dev\\MyApplication\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_round.png.flat",
         "source": "C:\\dev\\MyApplication\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\dev\\MyApplication\\app\\build\\intermediates\\res\\merged\\debug\\raw_heart_new.json.flat",
+        "source": "C:\\dev\\MyApplication\\app\\src\\main\\res\\raw\\heart_new.json"
     },
     {
         "merged": "C:\\dev\\MyApplication\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_splash.xml.flat",
@@ -86,6 +98,10 @@
     {
         "merged": "C:\\dev\\MyApplication\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
         "source": "C:\\dev\\MyApplication\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "C:\\dev\\MyApplication\\app\\build\\intermediates\\res\\merged\\debug\\raw_frame.json.flat",
+        "source": "C:\\dev\\MyApplication\\app\\src\\main\\res\\raw\\frame.json"
     },
     {
         "merged": "C:\\dev\\MyApplication\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_round.png.flat",

@@ -18,17 +18,19 @@ import java.util.List;
 
 public class RecyclerAdapter extends RecyclerView.Adapter {
 
-
-    private static final String TAG2 = "date";
     private List<String> uris;
     private List<String> duration;
     private List<String> dates;
-    private List<String> positions;
+    private List<String> favoriteImages;
     private String menuCount = "pictures";
+    SharedPreferences sharedPreferences;
     private Context context;
-    private int position_date_count = -1;
 
     RecyclerView recyclerView;
+
+    public RecyclerAdapter(List<String> favoriteImages) {
+        this.favoriteImages = favoriteImages;
+    }
 
     public RecyclerAdapter(List<String> images, String menuCount, Context context) {
         this.uris = images;
@@ -36,11 +38,12 @@ public class RecyclerAdapter extends RecyclerView.Adapter {
         this.context = context;
     }
 
-    public RecyclerAdapter(List<String> images, String menuCount, Context context, List<String> dates) {
+    public RecyclerAdapter(List<String> images, String menuCount, Context context, List<String> dates, List<String> favoriteImages) {
         this.uris = images;
         this.menuCount = menuCount;
         this.context = context;
         this.dates = dates;
+        this.favoriteImages = favoriteImages;
     }
 
     public RecyclerAdapter(List<String> images, String menuCount, List<String> duration, Context context, List<String> dates) {
@@ -78,8 +81,13 @@ public class RecyclerAdapter extends RecyclerView.Adapter {
     @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
         if (uris.get(position) != null) {
+            sharedPreferences = new SharedPreferences();
             ViewHolderImage viewHolderImage = (ViewHolderImage) holder;
             String image_id = uris.get(position);
+            if (sharedPreferences.isFavorite(image_id, ((ViewHolderImage) holder).album.getContext())){
+                viewHolderImage.favoriteHeart.setVisibility(View.VISIBLE);
+                viewHolderImage.album.setImageResource(R.drawable.gold_border);
+            }
             Glide
                     .with(context)
                     .load(image_id)
@@ -102,18 +110,34 @@ public class RecyclerAdapter extends RecyclerView.Adapter {
 
     @Override
     public int getItemCount() {
-        return uris.size();
+        try {
+            return uris.size();
+        } catch (Exception e) {
+            return 0;
+        }
+    }
+
+    public void addItemToFavorite(String item) {
+        favoriteImages.add(item);
+    }
+
+    public void deleteItemFromFavorite(String item) {
+        favoriteImages.remove(item);
     }
 
     class ViewHolderImage extends RecyclerView.ViewHolder {
 
         ImageView album;
         TextView durationView;
+        ImageView favoriteHeart;
+        boolean isFavorite;
 
         public ViewHolderImage(@NonNull View itemView) {
             super(itemView);
             album = itemView.findViewById(R.id.album);
             durationView = itemView.findViewById(R.id.durationView);
+            favoriteHeart = itemView.findViewById(R.id.favoriteHeart);
+            isFavorite = false;
         }
     }
 
@@ -127,7 +151,13 @@ public class RecyclerAdapter extends RecyclerView.Adapter {
         }
     }
 
-    private String parseDuration(int ms){
+    public void makeFavoriteHeart(View view, int position) {
+        if (recyclerView.getChildAt(position) == view) {
+            view.setVisibility(View.VISIBLE);
+        }
+    }
+
+    private String parseDuration(int ms) {
         int time = (int) ms / 1000;
         int seconds = time % 60;
         int minutes = (time % 3600) / 60;

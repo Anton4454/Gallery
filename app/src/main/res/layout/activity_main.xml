@@ -1,116 +1,94 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout android:layout_width="match_parent"
-    android:layout_height="match_parent"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
-    android:label="@string/app_name"
-    android:hint="@string/search_hint"
-    android:voiceSearchMode="showVoiceSearchButton|launchRecognizer"
-    android:searchSuggestAuthority="ru.phpnick.MySuggestionProvider"
-    android:searchSuggestSelection=" ?"
-    xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/main"
-    android:background="@color/darkBackground">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/darkBackground"
+    android:hint="@string/search_hint"
+    android:label="@string/app_name"
+    android:orientation="vertical"
+    android:overScrollMode="always">
 
-        <TextView
-        android:id="@+id/menuTypeView"
-        android:layout_width="wrap_content"
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/pictures"
-        android:textStyle="italic"
-        android:layout_gravity="center|top"
-        android:paddingTop="3dp"
-        android:textSize="35sp"
-        android:textColor="#ffffff"/>
+        android:background="@color/darkBackground"
+        android:fitsSystemWindows="true"
+        android:nestedScrollingEnabled="true">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            app:layout_scrollFlags="scroll|enterAlways">
+
+            <TextView
+                android:id="@+id/menuTypeView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|top"
+                android:paddingTop="70dp"
+                android:text="@string/pictures"
+                android:textColor="#ffffff"
+                android:textSize="30sp"
+                android:textStyle="italic"
+                app:layout_collapseMode="parallax" />
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:paddingBottom="3dp">
+
+            <Button
+                android:id="@+id/picturesButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/darkBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:text="@string/pictures"
+                android:textColor="#ffffff"
+                android:textStyle="italic" />
+
+            <Button
+                android:id="@+id/favoriteButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/darkBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:text="@string/favorite"
+                android:textColor="#ffffff"
+                android:textStyle="italic" />
+
+            <Button
+                android:id="@+id/videosButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/darkBackground"
+                android:text="@string/video"
+                android:textColor="#ffffff"
+                android:textStyle="italic" />
+        </LinearLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
-        android:scrollbars="vertical"
-        android:layout_gravity="center|top"
-        android:paddingBottom="80dp"
         android:paddingLeft="10dp"
-        android:paddingRight="10dp"/>
+        android:paddingRight="10dp"
+        android:scrollbars="vertical"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior" />
 
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
-        android:paddingBottom="20dp">
-
-        <Button
-            android:clickable="true"
-            android:id="@+id/picturesButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@color/darkBackground"
-            android:text="@string/pictures"
-            android:textStyle="italic"
-            android:textColor="#ffffff"
-            android:focusable="true" />
-
-        <Button
-            android:clickable="true"
-            android:id="@+id/favoriteButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@color/darkBackground"
-            android:text="@string/favorite"
-            android:textStyle="italic"
-            android:textColor="#ffffff"/>
-
-        <Button
-            android:id="@+id/videosButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@color/darkBackground"
-            android:text="@string/video"
-            android:textStyle="italic"
-            android:textColor="#ffffff"/>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:orientation="horizontal"
-        android:layout_gravity="bottom|center">
-
-        <com.airbnb.lottie.LottieAnimationView
-            android:id="@+id/imagesSelect"
-            android:layout_width="wrap_content"
-            android:layout_height="40dp"
-            android:layout_weight="1"
-            app:lottie_loop="true"
-            app:lottie_rawRes="@raw/menu_selected"
-            android:layout_gravity="bottom">
-        </com.airbnb.lottie.LottieAnimationView>
-
-        <com.airbnb.lottie.LottieAnimationView
-            android:id="@+id/favoriteSelect"
-            android:layout_width="wrap_content"
-            android:layout_height="40dp"
-            android:layout_weight="1"
-            app:lottie_loop="true"
-            app:lottie_rawRes="@raw/menu_selected"
-            android:layout_gravity="bottom">
-        </com.airbnb.lottie.LottieAnimationView>
-
-        <com.airbnb.lottie.LottieAnimationView
-            android:id="@+id/videosSelect"
-            android:layout_width="wrap_content"
-            android:layout_height="40dp"
-            android:layout_weight="1"
-            app:lottie_loop="true"
-            app:lottie_rawRes="@raw/menu_selected"
-            android:layout_gravity="bottom">
-        </com.airbnb.lottie.LottieAnimationView>
-    </LinearLayout>
-
-
-</FrameLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

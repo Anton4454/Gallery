@@ -1065,7 +1065,6 @@ drawable abc_vector_test
 drawable avd_hide_password
 drawable avd_show_password
 drawable background
-drawable backgroundimg
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
 drawable btn_checkbox_unchecked_mtrl
@@ -1081,6 +1080,8 @@ drawable design_ic_visibility
 drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
+drawable gold_border
+drawable heart
 drawable ic_action_action_search
 drawable ic_action_navigation_arrow_back
 drawable ic_action_navigation_arrow_back_inverted
@@ -1109,6 +1110,7 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable share
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
 drawable white_border
@@ -1182,6 +1184,7 @@ id album
 id alertTitle
 id all
 id always
+id appBarLayout
 id async
 id auto
 id automatic
@@ -1228,7 +1231,7 @@ id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
 id favoriteButton
-id favoriteSelect
+id favoriteHeart
 id fill
 id fill_horizontal
 id fill_vertical
@@ -1249,7 +1252,6 @@ id ifRoom
 id image
 id imageFS
 id imageFullSize
-id imagesSelect
 id info
 id invisible
 id italic
@@ -1385,7 +1387,6 @@ id unlabeled
 id up
 id useLogo
 id videosButton
-id videosSelect
 id view_offset_helper
 id visible
 id withText
@@ -1483,6 +1484,8 @@ layout support_simple_spinner_dropdown_item
 mipmap ic_launcher
 mipmap ic_launcher_round
 raw dots
+raw frame
+raw heart_new
 raw loading
 raw loading1
 raw loading_spinner

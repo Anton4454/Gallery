@@ -4,20 +4,25 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
+import android.widget.ImageButton;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.airbnb.lottie.LottieAnimationView;
 import com.bumptech.glide.Glide;
 import com.jsibbold.zoomage.ZoomageView;
 
 public class ImageFullSize extends AppCompatActivity {
 
-    Button button;
+    ImageButton imageButton;
+    LottieAnimationView lottieAnimationView;
     ZoomageView imageView;
+    SharedPreferences sharedPreferences;
+
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        sharedPreferences = new SharedPreferences();
         setContentView(R.layout.activity_image_full_size);
         Intent intent = getIntent();
         final String uri = intent.getStringExtra("uri");
@@ -29,17 +34,37 @@ public class ImageFullSize extends AppCompatActivity {
                 .into(imageView)
         ;
 
-        button = findViewById(R.id.sharingText);
-        button.setOnClickListener(new View.OnClickListener() {
+        imageButton = findViewById(R.id.sharingText);
+        imageButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent sendIntent = new Intent();
                 sendIntent.setAction(Intent.ACTION_SEND);
                 sendIntent.setType("image/*");
-                sendIntent.putExtra(Intent.EXTRA_STREAM, Uri.parse(4uri));
+                sendIntent.putExtra(Intent.EXTRA_STREAM, Uri.parse(uri));
                 startActivity(Intent.createChooser(sendIntent, "send to..."));
             }
         });
+
+        lottieAnimationView = findViewById(R.id.favoriteButton);
+        if (sharedPreferences.isFavorite(uri, this)) {
+            lottieAnimationView.setProgress(1);
+        }
+        lottieAnimationView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (!sharedPreferences.isFavorite(uri,getBaseContext())) {
+                    lottieAnimationView.resumeAnimation();
+                    sharedPreferences.addFavorite(uri, getBaseContext());
+                } else {
+                    lottieAnimationView.reverseAnimationSpeed();
+                    lottieAnimationView.playAnimation();
+                    sharedPreferences.removeFavorite(uri, getBaseContext());
+                }
+            }
+        });
     }
+
+
 
 }

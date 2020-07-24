@@ -20,8 +20,6 @@ import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.airbnb.lottie.LottieAnimationView;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.StringTokenizer;
@@ -35,77 +33,51 @@ public class MainActivity extends AppCompatActivity {
     Button picturesButton;
     Button favoriteButton;
     Button videoButton;
-    LottieAnimationView imagesSelect;
-    LottieAnimationView favoriteSelect;
-    LottieAnimationView videosSelect;
+    com.example.myapplication.SharedPreferences sharedPreferences;
 
     private List<String> imagesUri = new ArrayList<>();
-    private List<String> favoriteImagesUri = new ArrayList<>();
+    public List<String> favoriteImagesUri = new ArrayList<>();
     private List<String> videosUri = new ArrayList<>();
     private List<String> dates = new ArrayList<>();
-
     private String countMenu = "pictures";
     private RecyclerAdapter adapter;
-
     private GridLayoutManager layoutManager;
 
     @RequiresApi(api = Build.VERSION_CODES.Q)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        sharedPreferences = new SharedPreferences();
+        favoriteImagesUri = sharedPreferences.getFavorites(this);
         setContentView(R.layout.activity_main);
-        imagesSelect = (LottieAnimationView) findViewById(R.id.imagesSelect);
-        imagesSelect.playAnimation();
-        favoriteSelect = (LottieAnimationView) findViewById(R.id.favoriteSelect);
-        favoriteSelect.setVisibility(View.INVISIBLE);
-        videosSelect = (LottieAnimationView) findViewById(R.id.videosSelect);
-        videosSelect.setVisibility(View.INVISIBLE);
-        picturesButton = (Button) findViewById(R.id.picturesButton);
+        picturesButton = findViewById(R.id.picturesButton);
         picturesButton.setOnClickListener(
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
                         countMenu = "pictures";
-                        favoriteSelect.pauseAnimation();
-                        favoriteSelect.setVisibility(View.INVISIBLE);
-                        videosSelect.pauseAnimation();
-                        videosSelect.setVisibility(View.INVISIBLE);
-                        imagesSelect.setVisibility(View.VISIBLE);
-                        imagesSelect.resumeAnimation();
                         newMenu();
                     }
                 }
         );
 
-        favoriteButton = (Button) findViewById(R.id.favoriteButton);
+        favoriteButton = findViewById(R.id.favoriteButton);
         favoriteButton.setOnClickListener(
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
                         countMenu = "favorite";
-                        imagesSelect.pauseAnimation();
-                        imagesSelect.setVisibility(View.INVISIBLE);
-                        videosSelect.pauseAnimation();
-                        videosSelect.setVisibility(View.INVISIBLE);
-                        favoriteSelect.setVisibility(View.VISIBLE);
-                        favoriteSelect.resumeAnimation();
                         newMenu();
                     }
                 }
         );
 
-        videoButton = (Button) findViewById(R.id.videosButton);
+        videoButton = findViewById(R.id.videosButton);
         videoButton.setOnClickListener(
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
                         countMenu = "videos";
-                        imagesSelect.pauseAnimation();
-                        imagesSelect.setVisibility(View.INVISIBLE);
-                        favoriteSelect.pauseAnimation();
-                        favoriteSelect.setVisibility(View.INVISIBLE);
-                        videosSelect.setVisibility(View.VISIBLE);
-                        videosSelect.resumeAnimation();
                         newMenu();
                     }
                 }
@@ -117,7 +89,7 @@ public class MainActivity extends AppCompatActivity {
         layoutManager.setSpanSizeLookup(new GridLayoutManager.SpanSizeLookup() {
             @Override
             public int getSpanSize(int position) {
-                switch(adapter.getItemViewType(position)){
+                switch (adapter.getItemViewType(position)) {
                     case 1:
                         return 1;
                     default:
@@ -131,30 +103,28 @@ public class MainActivity extends AppCompatActivity {
                 new RecyclerItemClickListener(this, recyclerView, new RecyclerItemClickListener.OnItemClickListener() {
                     @Override
                     public void onItemClick(View view, int position) {
-                        String uri = imagesUri.get(position);
-                        ;
+                        String uri;
                         if (countMenu == "pictures") {
-                            //...
+                            uri = imagesUri.get(position);
                         } else if (countMenu == "favorite") {
                             uri = favoriteImagesUri.get(position);
-                        } else if (countMenu == "videos") {
+                        } else {
                             uri = videosUri.get(position);
                         }
-                        Intent intent = new Intent(getBaseContext(), ImageFullSize.class);
-                        intent.putExtra("uri", uri);
-                        startActivity(intent);
+                        if (uri != null) {
+                            Intent intent = new Intent(getBaseContext(), ImageFullSize.class);
+                            intent.putExtra("uri", uri);
+                            startActivity(intent);
+                        }
                     }
 
 
                     @Override
                     public void onLongItemClick(View view, int position) {
-                        Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
-                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O && countMenu == "pictures") {
+                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O
+                                && countMenu == "pictures") {
+                            Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
                             v.vibrate(VibrationEffect.createOneShot(100, VibrationEffect.DEFAULT_AMPLITUDE));
-                            favoriteImagesUri.add(imagesUri.get(position));
-                            Toast.makeText(getBaseContext(), "Add to favorite", Toast.LENGTH_SHORT).show();
-                        } else {
-                            v.vibrate(100);
                         }
                     }
                 })
@@ -170,7 +140,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void loadFavoriteImages() {
-        adapter = new RecyclerAdapter(favoriteImagesUri, countMenu, this);
+        adapter = new RecyclerAdapter(sharedPreferences.getFavorites(this), countMenu, this);
         recyclerView.setAdapter(adapter);
     }
 
@@ -185,8 +155,8 @@ public class MainActivity extends AppCompatActivity {
             }
         }
 
-        imagesUri.add(0,null);
-        adapter = new RecyclerAdapter(imagesUri, countMenu, this, dates);
+        imagesUri.add(0, null);
+        adapter = new RecyclerAdapter(imagesUri, countMenu, this, dates, sharedPreferences.getFavorites(this));
         recyclerView.setAdapter(adapter);
     }
 
@@ -201,7 +171,7 @@ public class MainActivity extends AppCompatActivity {
             }
         }
 
-        videosUri.add(0,null);
+        videosUri.add(0, null);
         adapter = new RecyclerAdapter(videosUri, countMenu, VideoDuration.listOfDuration(this), this, dates);
         recyclerView.setAdapter(adapter);
     }
@@ -248,29 +218,59 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    private List<String> parseDate(List<String> dates){
-        for (int i = 0; i < dates.size(); i++){
+    private List<String> parseDate(List<String> dates) {
+        for (int i = 0; i < dates.size(); i++) {
             StringTokenizer tokenizer = new StringTokenizer(dates.get(i), ".");
             String day = tokenizer.nextToken();
             String month = tokenizer.nextToken();
             String year = tokenizer.nextToken();
-            switch(month){
-                case "1": month = "янв."; break;
-                case "2": month = "фев."; break;
-                case "3": month = "мар."; break;
-                case "4": month = "апр."; break;
-                case "5": month = "мая"; break;
-                case "6": month = "июн."; break;
-                case "7": month = "июл."; break;
-                case "8": month = "авг."; break;
-                case "9": month = "сен."; break;
-                case "10": month = "окт."; break;
-                case "11": month = "нояб."; break;
-                case "12": month = "дек."; break;
+            switch (month) {
+                case "1":
+                    month = "янв.";
+                    break;
+                case "2":
+                    month = "фев.";
+                    break;
+                case "3":
+                    month = "мар.";
+                    break;
+                case "4":
+                    month = "апр.";
+                    break;
+                case "5":
+                    month = "мая";
+                    break;
+                case "6":
+                    month = "июн.";
+                    break;
+                case "7":
+                    month = "июл.";
+                    break;
+                case "8":
+                    month = "авг.";
+                    break;
+                case "9":
+                    month = "сен.";
+                    break;
+                case "10":
+                    month = "окт.";
+                    break;
+                case "11":
+                    month = "нояб.";
+                    break;
+                case "12":
+                    month = "дек.";
+                    break;
             }
             dates.set(i, day + " " + month + " " + year + " г.");
         }
 
         return dates;
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        sharedPreferences.saveFavorites(sharedPreferences.getFavorites(this), this);
     }
 }

@@ -2,12 +2,12 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/imageFS"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ImageFullSize"
-    android:id="@+id/imageFS"
     android:background="@color/darkBackground"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".ImageFullSize">
 
     <com.jsibbold.zoomage.ZoomageView
         android:id="@+id/imageFullSize"
@@ -17,32 +17,47 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:zoomage_restrictBounds="false"
         app:zoomage_animateOnReset="true"
-        app:zoomage_autoResetMode="UNDER"
         app:zoomage_autoCenter="true"
-        app:zoomage_zoomable="true"
-        app:zoomage_translatable="true"
+        app:zoomage_autoResetMode="UNDER"
+        app:zoomage_maxScale="8"
         app:zoomage_minScale="1"
-        app:zoomage_maxScale="8"/>
+        app:zoomage_restrictBounds="false"
+        app:zoomage_translatable="true"
+        app:zoomage_zoomable="true" />
 
-    <Button
-        android:id="@+id/sharingText"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center|bottom"
-        android:text="@string/sharing"
-        android:textColor="@color/colorWhite"
-        android:background="#7000"
-        android:textStyle="italic"
-        android:textSize="25sp"
-        android:gravity="center"
-        android:clickable="true"
+        android:layout_height="70dp"
+        android:layout_gravity="bottom"
+        android:orientation="horizontal"
         android:shadowColor="#000"
-        android:focusable="true"
-        android:paddingBottom="10dp"
         android:shadowDx="3"
         android:shadowDy="3"
-        android:shadowRadius="6"/>
+        android:shadowRadius="6">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/favoriteButton"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#7000"
+            android:textStyle="italic"
+            app:lottie_loop="false"
+            app:lottie_progress="0.1"
+            app:lottie_rawRes="@raw/heart_new" />
+
+        <ImageButton
+            android:id="@+id/sharingText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/share"
+            android:layout_weight="1"
+            android:background="#7000"
+            android:textColor="@color/colorWhite"
+            android:textSize="25sp"
+            android:textStyle="italic" />
+
+    </LinearLayout>
 
 </FrameLayout>
